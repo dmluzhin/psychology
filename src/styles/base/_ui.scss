@@ -1,0 +1,25 @@
+.text {
+  &__left {
+    text-align: left;
+  }
+  &__center {
+    text-align: center;
+  }
+  &__right {
+    text-align: right;
+  }
+}
+.taxonomi {
+  font-size: $fontSizeBase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ml {
+  &-4 {
+    margin-left: $pdBase * 4;
+  }
+  &-6 {
+    margin-left: $pdBase * 6;
+  }
+}

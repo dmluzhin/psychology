@@ -9,3 +9,193 @@ header, .header {
         margin: 0 auto;
     }
 }
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    &__brand {
+        display: flex;
+        align-items: stretch;
+        flex-shrink: 0;
+    }
+    &__item {
+        display: flex;
+        min-height: 55px;
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .logo {
+            width: 210px;
+            height: auto;
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        &--start, &--end {
+            display: flex;
+            flex: 1 1 auto;
+        }
+        &--end {
+            justify-content: flex-end;
+            .btn {
+                margin-left: $pdLarge;
+            }
+        }
+    }
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex: 1 0 auto;
+        .navbar__item {
+            min-height: auto;
+            padding: 0 $pdMed;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $black;
+        font-size: $fontSizeBase;
+        font-weight: 600;
+        &:hover {
+            color: $primary;
+        }
+        &.active {
+            color: $primary;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        flex-shrink: 0;
+    }
+    &__phone {
+        margin-bottom: $pdMed;
+    }
+    &__hamburger {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+        margin: auto;
+        width: 32px;
+        height: 32px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        &--line {
+            width: 100%;
+            height: 2px;
+            background-color: $primary;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header, .header {
+        padding: $pdMed * 2 0;
+        height: auto;
+    }
+    .navbar {
+        &__menu--start {
+            position: absolute;
+            width: 100%;
+            bottom: -50px;
+            left: 0;
+        }
+        &__nav {
+            padding-left: 77px;
+            .navbar__item {
+                padding: 0 $pdBase * 5;
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+        &__contacts {
+            flex-direction: row;
+            align-items: center;
+        }
+        &__phone {
+            margin-bottom: 0;
+            margin-right: $pdLarge;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar {
+        &__menu {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            width: 100%;
+            top: 100px;
+            left: 0;
+            background-color: $primary;
+            padding: $pdBase * 5 0 $pdReg * 5 0;
+        }
+        &__menu--start {
+            position: static;
+        }
+        &__menu--end {
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: $pdBig;
+            .btn__primary {
+                background-color: $secondary !important;
+                margin-left: 0 !important;
+            }
+        }
+        &__nav {
+            padding-left: 0;
+            flex-direction: column;
+            align-items: center;
+            .navbar__item {
+                padding: 0;
+                width: 100%;
+            }
+            .navbar__link {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: $pdMed 0;
+                color: $white;
+            }
+        }
+        &__contacts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            .taxonomi {
+                color: $white;
+            }
+        }
+        &__phone {
+            margin-bottom: $pdReg;
+            margin-right: 0;
+        }
+        &__email {
+            margin-bottom: $pdReg * 5;
+        }
+        &__hamburger {
+            display: flex;
+        }
+    }
+}

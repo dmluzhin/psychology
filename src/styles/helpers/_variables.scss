@@ -3,4 +3,24 @@ $secondary:             #36DAA9;
 $white:                 #ffffff;
 $black:                 #000;
 
-$shadowDp4:             0 15px 49px rgba(0,0,0,.2);
+/*Fonts*/
+$monseratt:           'Montserrat', Arial, sans-serif;
+
+/*Font Sizes*/
+$fontSizeBase:          16px;
+$fontSizeReg:           14px;
+
+/*Paddings*/
+$pdBase:                5px;
+$pdReg:                 $pdBase * 2;
+$pdMed:                 $pdBase * 3;
+$pdLarge:               $pdMed * 2;
+$pdBig:                 $pdMed * 6;
+
+$shadowDp1:             0 1px 2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$shadowDp3:             0 17px 46px rgba(0,0,0,.1);
+$shadowDp4:             0 15px 50px rgba(0,0,0,.2);
+
+/*Transitions*/
+$transitionShadow:      box-shadow 150ms linear;
+$transitionEase:        all ease .4s;

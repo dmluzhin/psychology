@@ -1,0 +1,38 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $pdMed;
+  border-radius: 50px;
+  border: none;
+  font-size: $fontSizeBase;
+  font-weight: 600;
+  text-align: center;
+  color: $primary;
+  background-color: $white;
+  box-shadow: $shadowDp3;
+  transition: $transitionShadow;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: $shadowDp4;
+  }
+  &:active {
+    transition: $transitionEase;
+    background-color: darken($white, 5%);
+    box-shadow: $shadowDp3;
+  }
+  &__primary {
+    background-color: $primary;
+    color: $white;
+    transition: $transitionEase;
+    &:hover {
+      background-color: lighten($primary, 5%);
+    }
+    &:active {
+      transition: $transitionEase;
+      background-color: darken($primary, 5%);
+    }
+  }
+}
