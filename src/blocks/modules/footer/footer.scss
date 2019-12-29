@@ -1,0 +1,81 @@
+footer, .footer {
+  position: relative;
+  width: 100%;
+  background-color: $primary;
+  color: $white;
+  font-size: $fontSizeBase;
+  padding: $pdLarge + 10px 0 $pdBig 0;
+  flex: 1 0 auto;
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__col {
+    @include col();
+    @include size(3);
+    @include size-lg(3);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+    @media screen and (max-width: 1200px) {
+      margin-bottom: $pdLarge;
+    }
+  }
+  &__headline {
+    font-size: $fontSizeLarge;
+    font-weight: 600;
+    margin-bottom: $pdLarge;
+  }
+  &__subheadline {
+    font-size: $fontSizeBase;
+    font-weight: 600;
+    margin-bottom: $pdLarge * 2;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__list--item {
+
+  }
+  &__list--has-icon {
+    position: relative;
+    padding-left: $pdBase * 9;
+    .footer__list--link {
+      opacity: 1;
+    }
+  }
+  &__list--icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $white;
+    width: 24px;
+    height: 24px;
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__list--link {
+    display: block;
+    width: 100%;
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: .5;
+    transition: $transitionEase;
+    padding: $pdReg 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
