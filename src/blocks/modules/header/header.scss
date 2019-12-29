@@ -1,8 +1,7 @@
 header, .header {
     width: 100%;
-    height: 155px;
     background-color: $white;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 
     .container {
         height: 100%;
@@ -104,6 +103,40 @@ header, .header {
     }
 }
 
+.subheader {
+    margin-top: $pdBase * 10;
+    background-color: $primary;
+    width: 100%;
+    padding: $pdLarge 0;
+    color: $white;
+    &__container {
+        @extend .container;
+    }
+    &__menu {
+        @extend .navbar__menu;
+        padding-left: 210px;
+    }
+    &__nav {
+        @extend .navbar__nav;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__nav--item {
+        @extend .navbar__item;
+        flex: 0 0 auto;
+        flex-basis: 100px;
+    }
+    &__nav--link {
+        text-decoration: none;
+        color: $white;
+        line-height: 1.4;
+        font-size: $fontSizeBase;
+        font-weight: 600;
+
+    }
+}
+
 @media screen and (max-width: 1200px) {
     header, .header {
         padding: $pdMed * 2 0;
@@ -132,6 +165,15 @@ header, .header {
         &__phone {
             margin-bottom: 0;
             margin-right: $pdLarge;
+        }
+    }
+    .subheader {
+        margin-top: 80px;
+        &__menu {
+            padding-left: 0;
+        }
+        &__nav {
+            padding-left: 57px;
         }
     }
 }
