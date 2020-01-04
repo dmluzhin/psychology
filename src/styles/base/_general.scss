@@ -33,8 +33,17 @@ a {
     flex: 1 0 auto;
 }
 section, .section {
-    padding: $pdBig 0;
+    padding: $pdSection 0;
     &__white {
         background-color: $white;
+    }
+    &__blue {
+        background-color: $primary;
+    }
+    &__blue--bg {
+        background-image: url("../img/images/bg.png");
+        background-position: center center;
+        background-size: auto;
+        background-repeat: repeat;
     }
 }

@@ -139,7 +139,7 @@ header, .header {
 
 @media screen and (max-width: 1200px) {
     header, .header {
-        padding: $pdMed * 2 0;
+        padding: $pdMed * 2 0 0 0;
         height: auto;
     }
     .navbar {
@@ -150,7 +150,7 @@ header, .header {
             left: 0;
         }
         &__nav {
-            padding-left: 77px;
+            padding-left: $pdMed;
             .navbar__item {
                 padding: 0 $pdBase * 5;
                 &:first-child {
@@ -173,7 +173,7 @@ header, .header {
             padding-left: 0;
         }
         &__nav {
-            padding-left: 57px;
+            padding-left: 0;
         }
     }
 }

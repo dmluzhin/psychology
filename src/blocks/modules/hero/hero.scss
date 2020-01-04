@@ -12,7 +12,7 @@
   &__col {
     @include col();
     @include size-lg(8);
-    @include size-md(10);
+    @include size-md(9);
     @include size-sm(12);
     @include size-xs(12);
   }
@@ -55,5 +55,14 @@
   }
   &__highlighted {
     color: $primary;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding: 60px 0;
+    &__bg {
+      background-position: right -150px bottom -10px;
+    }
   }
 }

@@ -1,0 +1,37 @@
+.test {
+  &__container {
+    @extend .container;
+  }
+  &__text--row, &__btn--row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__text--col, &__btn--col {
+    @include col();
+    @include size-lg(6);
+    @include size-md(9);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__btn--col {
+    display: flex;
+    justify-content: center;
+    margin-top: $pdLarge;
+    .btn {
+      flex-basis: 50%;
+      &:first-child {
+        margin-right: $pdMed;
+      }
+      &:last-child {
+        margin-left: $pdMed;
+      }
+    }
+  }
+  &__text--text {
+    text-align: center;
+    color: $white;
+    font-weight: 600;
+    font-size: $fontSizeBase;
+    line-height: 1.6;
+  }
+}

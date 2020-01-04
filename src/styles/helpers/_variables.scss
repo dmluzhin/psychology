@@ -10,12 +10,14 @@ $monseratt:           'Montserrat', Arial, sans-serif;
 $fontSizeBase:          16px;
 $fontSizeReg:           14px;
 $fontSizeLarge:         24px;
+$fontSizeGiant:         80px;
 
 /*Paddings*/
 $pdBase:                5px;
 $pdReg:                 $pdBase * 2;
 $pdMed:                 $pdBase * 3;
 $pdLarge:               $pdMed * 2;
+$pdSection:             $pdReg * 6;
 $pdBig:                 $pdMed * 6;
 
 $shadowDp1:             0 1px 2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);

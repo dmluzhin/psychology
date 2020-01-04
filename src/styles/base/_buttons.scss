@@ -35,4 +35,15 @@
       background-color: darken($primary, 5%);
     }
   }
+  &__secondary {
+    background-color: $secondary;
+    color: $white;
+    &:hover {
+      background-color: lighten($secondary, 5%);
+    }
+    &:active {
+      transition: $transitionEase;
+      background-color: darken($secondary, 5%);
+    }
+  }
 }

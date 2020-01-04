@@ -1,0 +1,77 @@
+.statistics {
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__col {
+    @include col();
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__card {
+    position: relative;
+    border-left: 3px solid $primary;
+    padding-top: 45px;
+  }
+  &__percent {
+    font-size: $fontSizeGiant;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: $pdMed;
+    line-height: 60px;
+  }
+  &__text {
+    padding-left: 120px;
+    font-size: $fontSizeBase;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: $pdBase * 4;
+  }
+  &__conclusion {
+    padding-left: $pdMed;
+    font-size: $fontSizeBase;
+    font-weight: 600;
+  }
+}
+.percent {
+  position: absolute;
+  top: -5px;
+  left: auto;
+  line-height: 1;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1200px) {
+  .statistics {
+    &__card {
+      padding-top: 0;
+      padding-left: $pdMed;
+    }
+    &__percent {
+      position: static;
+    }
+    &__text {
+      padding-left: 0;
+    }
+    &__conclusion {
+      padding-left: 0;
+    }
+  }
+  .percent {
+    position: static;
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .statistics {
+    &__card {
+      margin-bottom: $pdLarge;
+    }
+  }
+}

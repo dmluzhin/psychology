@@ -1,0 +1,13 @@
+.cartoon {
+  &__col {
+    column-width: 200px;
+    column-gap: 30px;
+  }
+  &__card {
+    background-color: gray;
+    padding: $pdMed;
+  }
+}
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
