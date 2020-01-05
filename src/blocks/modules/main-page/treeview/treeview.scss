@@ -1,0 +1,187 @@
+.treeview {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .header__1;
+  }
+  &__scheme {}
+  &__scheme--buttons-top, &__scheme--buttons-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  &__scheme--buttons-bottom {
+    padding-left: 200px;
+  }
+  &__scheme--line {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+    margin: $pdReg auto;
+
+  }
+  &__btn {
+    @extend .btn;
+    @extend .btn__primary;
+    margin-right: $pdLarge;
+    min-width: 260px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.treeview__btn--active {
+      @extend .btn;
+      border: 3px solid $primary !important;
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+  &__cards {
+    margin-top: $pdBig;
+    @include row-flex();
+  }
+  &__cards--col {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__card {
+    background-color: $white;
+    padding: $pdSection $pdLarge $pdSection $pdLarge;
+    box-shadow: $shadowDp3;
+    margin-bottom: $pdMed;
+  }
+}
+
+.scheme {
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: $primary;
+  }
+  &__branch {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  &__branch--first {
+    .scheme__branch--circle {
+      left: 280px;
+      &:before {
+        bottom: 100%;
+      }
+      &:after {
+        bottom: 50px;
+      }
+    }
+  }
+  &__branch--second {
+    .scheme__branch--circle {
+      left: 380px;
+      &:before {
+        top: 100%;
+      }
+      &:after {
+        top: 50px;
+      }
+    }
+  }
+  &__branch--third {
+    .scheme__branch--circle {
+      left: 570px;
+      &:before {
+        bottom: 100%;
+      }
+      &:after {
+        bottom: 50px;
+      }
+    }
+  }
+  &__branch--fourth {
+    .scheme__branch--circle {
+      left: 670px;
+      &:before {
+        top: 100%;
+      }
+      &:after {
+        top: 50px;
+      }
+    }
+  }
+  &__branch--five {
+    .scheme__branch--circle {
+      left: 870px;
+      &:before {
+        bottom: 100%;
+      }
+      &:after {
+        bottom: 50px;
+      }
+    }
+  }
+  &__branch--six {
+    .scheme__branch--circle {
+      left: 970px;
+      &:before {
+        top: 100%;
+      }
+      &:after {
+        top: 50px;
+      }
+    }
+  }
+
+  &__branch--line {
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    background-color: $primary;
+  }
+  &__branch--circle {
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border: 3px solid $primary;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: $fontSizeBase;
+    color: $textGray;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: $primary;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: $primary;
+    }
+  }
+}

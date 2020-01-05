@@ -1,3 +1,12 @@
+.header {
+  &__1 {
+    font-size: $fontSizeLarge;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: $pdLarge;
+  }
+}
 .text {
   &__left {
     text-align: left;

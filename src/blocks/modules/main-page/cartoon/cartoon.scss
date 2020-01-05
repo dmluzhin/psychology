@@ -1,13 +1,84 @@
 .cartoon {
+  &__container {
+    @extend .container;
+  }
   &__col {
-    column-width: 200px;
-    column-gap: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    height: 1140px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    &:before, &:after {
+      content: "";
+      flex-basis: 100%;
+      width: 0;
+      order: 2;
+    }
+  }
+  &__title {
+    margin: 0 auto;
+    margin-bottom: $pdBig !important;
+    @extend .header__1;
+    max-width: 960px;
   }
   &__card {
-    background-color: gray;
-    padding: $pdMed;
+    box-shadow: $shadowDp3;
+    padding: $pdLarge + $pdMed $pdLarge;
+    margin-bottom: $pdLarge;
+    margin-right: $pdMed;
+    width: 50%;
+    max-width: 460px;
+    order: 1;
+    &:nth-child(even) {
+      order: 2;
+      margin-right: 0;
+      margin-left: $pdMed;
+    }
+  }
+  &__card--title {
+    @extend .statistics__conclusion;
+    margin-bottom: $pdLarge;
+    line-height: 1.4;
+  }
+  &__card--image {
+    max-width: 100%;
+    margin-bottom: $pdLarge;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__card--text {
+    @extend .hero__defenition;
+    @extend .hero__paragraph;
+    margin: 0;
   }
 }
-
-.grid-item { width: 200px; }
-.grid-item--width2 { width: 400px; }
+@media screen and (max-width: 767px) {
+  .cartoon {
+    &__container {
+      max-width: 700px;
+    }
+    &__col {
+      max-width: 700px;
+    }
+  }
+}
+@media screen and (max-width: 749px) {
+  .cartoon {
+    &__col {
+      height: auto;
+    }
+    &__card {
+      width: 100%;
+      margin-right: 0;
+      &:nth-child(even) {
+        order: unset;
+        margin-left: 0;
+      }
+    }
+  }
+}
