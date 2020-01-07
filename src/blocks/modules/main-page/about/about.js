@@ -23,20 +23,7 @@ $(document).ready(function () {
 
 	// Intial Tab Height
 	var tabHeight = $('.about__tab.active').height();
-
-	// Animate Tab Height
-	function animateTabHeight() {
-
-		// Update Tab Height
-		tabHeight = $('.about__tab.active').height();
-
-		// Animate Height
-		$('.about__tabs--content').stop().css({
-			height: tabHeight + 'px'
-		});
-	}
-
-	animateTabHeight();
+	
 
 	// Change Tab
 	function changeTab() {
@@ -53,7 +40,7 @@ $(document).ready(function () {
 			$(this).addClass('active');
 
 			// Animate Height
-			animateTabHeight();
+			
 		});
 	}
 
@@ -86,8 +73,6 @@ $(document).ready(function () {
 			// Add Class
 			$(this).addClass('active');
 
-			// Animate Height
-			animateTabHeight();
 		});
 	});
 
