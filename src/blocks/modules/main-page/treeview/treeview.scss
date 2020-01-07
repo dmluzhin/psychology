@@ -41,6 +41,7 @@
     }
   }
   &__cards {
+    position: relative;
     margin-top: $pdBig;
     @include row-flex();
   }
@@ -95,10 +96,26 @@
     @extend .list__item;
     margin-left: 20px;
   }
+  &__contact {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -65px;
+    margin: auto;
+    font-size: $fontSizeGiant;
+    font-weight: 600;
+    color: rgba($black, .1);
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 .scheme {
   &__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 100%;
     height: 3px;
     background-color: $primary;
@@ -219,6 +236,83 @@
       right: 0;
       margin: auto;
       background-color: $primary;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .treeview {
+    &__scheme--buttons-bottom {
+      padding-left: 0;
+    }
+    &__scheme--line {
+      display: flex;
+      justify-content: center;
+    }
+    &__btn {
+      font-size: $fontSizeReg !important;
+    }
+  }
+  .scheme {
+    &__branch {
+      position: relative;
+    }
+    &__branch--first {
+      .scheme__branch--circle {
+        position: relative;
+        left: -30px;
+        top: 15px;
+      }
+    }
+    &__branch--second {
+      .scheme__branch--circle {
+        position: relative;
+        left: 30px;
+        top: -15px;
+      }
+    }
+    &__branch--third {
+      .scheme__branch--circle {
+        position: relative;
+        left: -30px;
+        top: 15px;
+      }
+    }
+    &__branch--fourth {
+      .scheme__branch--circle {
+        position: relative;
+        left: 30px;
+        top: -15px;
+      }
+    }
+    &__branch--five {
+      .scheme__branch--circle {
+        position: relative;
+        left: -30px;
+        top: 15px;
+      }
+    }
+    &__branch--six {
+      .scheme__branch--circle {
+        position: relative;
+        left: 30px;
+        top: -15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .treeview {
+    &__card {
+      padding-left: $pdMed;
+      padding-right: $pdMed;
+    }
+    &__btn {
+      min-width: auto;
+      flex: 1 0 auto;
+      flex-basis: 30%;
+    }
+    &__container {
+      max-width: 992px;
     }
   }
 }

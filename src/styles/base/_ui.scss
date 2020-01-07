@@ -9,13 +9,13 @@
 }
 .text {
   &__left {
-    text-align: left;
+    text-align: left !important;
   }
   &__center {
-    text-align: center;
+    text-align: center !important;
   }
   &__right {
-    text-align: right;
+    text-align: right !important;
   }
 }
 .taxonomi {

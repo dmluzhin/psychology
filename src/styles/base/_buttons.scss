@@ -46,4 +46,9 @@
       background-color: darken($secondary, 5%);
     }
   }
+  &__inline {
+    background-color: $primary;
+    border: 3px solid $white;
+    color: $white;
+  }
 }

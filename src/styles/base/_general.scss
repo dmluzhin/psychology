@@ -8,6 +8,7 @@ body {
     font-family: $monseratt;
     background-color: $white;
     color: $black;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
@@ -45,5 +46,26 @@ section, .section {
         background-position: center center;
         background-size: auto;
         background-repeat: repeat;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 400
+}
+p.paragraph {
+    margin-bottom: $pdMed;
+}
+
+ul.list {
+    padding-left: 20px;
+    li {
+        line-height: 1.6;
     }
 }
