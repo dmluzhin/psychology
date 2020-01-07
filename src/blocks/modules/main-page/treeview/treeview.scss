@@ -53,10 +53,47 @@
     @include size-xs(12);
   }
   &__card {
+    position: relative;
     background-color: $white;
     padding: $pdSection $pdLarge $pdSection $pdLarge;
     box-shadow: $shadowDp3;
     margin-bottom: $pdMed;
+    min-height: 320px;
+  }
+  &__card--circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid $borderGray;
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $pdReg;
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  &__card--title {
+    @extend .statistics__conclusion;
+    margin-bottom: $pdLarge;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0;
+  }
+  &__card--list {
+
+  }
+  &__card--list-item {
+    @extend .list__item;
+    margin-left: 20px;
   }
 }
 

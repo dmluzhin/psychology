@@ -32,3 +32,16 @@
     margin-left: $pdBase * 6;
   }
 }
+
+.list {
+  &__item {
+    font-size: $fontSizeReg;
+    font-weight: 600;
+    color: $listColor;
+    margin-bottom: $pdMed;
+    line-height: 1.4;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
