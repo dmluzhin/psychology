@@ -1,6 +1,7 @@
 .about {
   &__container {
     @extend .container;
+    margin-bottom: $pdLarge * 2;
   }
   &__title {
     @extend .header__1;
@@ -142,5 +143,50 @@
   }
   &__tab--text {
     padding-left: $pdMed;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+    &__container {
+      max-width: 100%;
+    }
+    &__tabs--item {
+      padding: 0 $pdMed;
+      flex: 1 1 auto;
+    }
+    &__tabs--link {
+      font-size: $fontSizeReg;
+      text-align: center;
+    }
+    &__tabs--content {
+      padding-top: $pdMed;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .about {
+    &__tabs--list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+    &__tabs--item {
+      flex: 1 0 auto;
+      flex-basis: 100%;
+    }
+    &__tabs--link {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    &__tabs--content {
+      padding-top: $pdLarge;
+    }
+    &__tab--row {
+      flex-direction: column-reverse;
+    }
+    &__tab--image {
+      margin-top: $pdLarge;
+    }
   }
 }
