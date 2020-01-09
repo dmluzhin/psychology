@@ -1,0 +1,14 @@
+.career-conclusion {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__text {
+    @extend .text;
+    font-weight: 600;
+    color: $primary;
+    text-align: center;
+  }
+}

@@ -1,0 +1,141 @@
+.analysis {
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @include row-flex();
+    margin-bottom: $pdLarge * 2;
+  }
+  &__col-3 {
+    @include col();
+    @include size-xl(3);
+    @include size-lg(3);
+    @include size-md(3);
+    @include size-sm(3);
+    @include size-xs(12);
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(4);
+    @include size-xs(12);
+  }
+  &__col-5 {
+    @include col();
+    @include size-xl(5);
+    @include size-lg(5);
+    @include size-md(5);
+    @include size-sm(5);
+    @include size-xs(12);
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    font-size: $fontSizeBase;
+    font-weight: 600;
+    margin-bottom: $pdLarge;
+  }
+  &__text {
+    @extend .text;
+    text-align: center;
+  }
+  &__info {
+  }
+  &__info--list {
+    @extend .list;
+  }
+  &__info--defenition {
+    padding-left: $pdLarge + $pdReg;
+    border-left: 3px solid $primary;
+  }
+  &__info--list-item {
+    @extend .list__item;
+    margin-bottom: $pdLarge;
+    font-size: $fontSizeBase !important;
+  }
+  &__card {
+    @extend .card;
+    padding: $pdReg;
+    text-align: center;
+  }
+  &__column {
+    margin-bottom: $pdLarge;
+  }
+  &__column--divided {
+    padding-left: $pdLarge;
+    position: relative;
+  }
+  &__column--divider {
+    position: absolute;
+    width: 3px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $primary;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5px;
+      right: 0;
+      width: 7px;
+      height: 7px;
+      border: 3px solid $primary;
+      background-color: $white;
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: $primary;
+      border-radius: 50%;
+      bottom: -10px;
+      left: -1px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .analysis {
+    &__container {
+      max-width: 100%;
+    }
+    &__card {
+      margin-bottom: $pdLarge;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .analysis {
+    &__column--divided {
+      padding-left: 0;
+      padding-top: $pdLarge;
+    }
+    &__column--divider {
+      height: 3px;
+      left: 0;
+      width: calc(100% - 10px);
+      &:before {
+        top: -5px;
+        left: -5px;
+      }
+      &:after {
+        right: -10px;
+        left: auto;
+        bottom: -1px;
+      }
+    }
+  }
+}

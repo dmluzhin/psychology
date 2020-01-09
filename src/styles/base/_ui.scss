@@ -33,15 +33,28 @@
   }
 }
 
+.mt {
+  &-3 {
+    margin-top: $pdBase * 3;
+  }
+  &-4 {
+    margin-top: $pdBase * 4;
+  }
+}
+
 .list {
   &__item {
     font-size: $fontSizeReg;
-    font-weight: 600;
-    color: $listColor;
+    font-weight: 500;
     margin-bottom: $pdMed;
-    line-height: 1.4;
+    line-height: 1.5;
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+.card {
+  background-color: $white;
+  box-shadow: $shadowDp3;
 }

@@ -1,0 +1,133 @@
+.statistics-career {
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__row--pd {
+    padding: 0 120px;
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(4);
+    @include size-xs(12);
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-12 {
+    @include col();
+    @include size-xl(12);
+    @include size-lg(12);
+    @include size-md(12);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__title {
+    @extend .title;
+  }
+  &__card {
+    width: 100%;
+    position: relative;
+    padding-left: 100px;
+  }
+  &__bg-1, &__bg-2, &__bg-3 {
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: top left;
+    background-size: 85px;
+    background-repeat: no-repeat;
+  }
+  &__bg-1 {
+    background-image: url("../img/images/career-ill2.png");
+  }
+  &__bg-2 {
+    background-image: url("../img/images/career-ill3.png");
+  }
+  &__bg-3 {
+    background-image: url("../img/images/career-ill4.png");
+  }
+  &__content--title {
+    font-size: $fontSizeBig;
+    font-weight: 500;
+  }
+  &__content--text {
+    @extend .text;
+  }
+  &__text {
+    margin-top: $pdBig;
+    text-align: center;
+  }
+  &__stat-card {
+    @extend .statistics__card;
+    border-left: none;
+    margin-top: $pdBig;
+  }
+  &__stat-card--percent {
+    @extend .statistics__percent;
+  }
+  &__stat-card--text {
+    @extend .statistics__text;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .statistics-career {
+    &__row--pd {
+      padding: 0;
+    }
+    &__card {
+      padding-left: 0;
+    }
+    &__bg-1, &__bg-2, &__bg-3 {
+      position: static;
+      width: 100px;
+      height: 100px;
+      background-size: 100px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .statistics-career {
+    &__container {
+      max-width: 100%;
+    }
+    &__card {
+      margin: 0 auto;
+      max-width: 320px;
+      margin-bottom: $pdLarge;
+    }
+    &__content--title {
+      font-size: $fontSizeBig - 10px;
+    }
+    &__text {
+      margin-top: $pdLarge * 2;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .statistics-career {
+    &__text {
+      margin-top: $pdLarge;
+      text-align: left;
+    }
+    &__stat-card {
+      padding-left: 0;
+      margin-top: $pdLarge;
+      margin-bottom: 0;
+    }
+  }
+}

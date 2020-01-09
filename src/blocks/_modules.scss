@@ -1,6 +1,9 @@
+/*global*/
 @import "modules/header/header";
 @import "modules/footer/footer";
-@import "modules/hero/hero";
+
+/*main-page*/
+@import "modules/main-page/hero/hero";
 @import "modules/main-page/record/record";
 @import "modules/main-page/statistics/statistics";
 @import "modules/main-page/test/test";
@@ -10,3 +13,11 @@
 @import "modules/main-page/about/about";
 @import "modules/main-page/conclusion/conclusion";
 @import "modules/main-page/contact-form/contact-form";
+
+/*career*/
+@import "modules/career-page/hero/hero";
+@import "modules/career-page/statistics-career/statistics-career";
+@import "modules/career-page/targets/targets";
+@import "modules/career-page/progress/progress";
+@import "modules/career-page/career-conclusion/career-conclusion";
+@import "modules/career-page/analysis/analysis";
