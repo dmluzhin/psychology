@@ -1,0 +1,104 @@
+.perspective {
+  &__container {
+    @extend .container;
+  }
+  &__container--table {
+    margin-top: $pdBig;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+  &__col-12 {
+    @include col();
+    @include size-xl(12);
+    @include size-lg(12);
+    @include size-md(12);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__table {
+    width: 100%;
+    background-color: $white;
+    box-shadow: $shadowDp3;
+    border: none;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: $pdLarge;
+    position: relative;
+  }
+  &__table--row {
+    &:last-child {
+      .perspective__table--cell {
+        border-bottom: none;
+      }
+    }
+  }
+  &__table--head, &__table--cell {
+    padding: $pdLarge + $pdMed;
+    text-align: left;
+    line-height: 1.5;
+    border-bottom: 3px solid rgba($primary, .5);
+    &:first-child {
+      border-bottom: none;
+    }
+    &:nth-child(even) {
+      background-color: #F7F7F7;
+    }
+  }
+  &__table--head {
+    font-weight: 600;
+  }
+  &__table--cell:first-child {
+    font-weight: 600;
+  }
+  &__image {
+    text-align: center;
+  }
+  &__content {
+    //margin-top: $pdBig;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .perspective {
+    &__container--table {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .perspective {
+    &__table--head, &__table--cell {
+      padding: $pdLarge;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .perspective {
+    &__table--head, &__table--cell {
+      padding: $pdMed;
+      font-size: $fontSizeReg;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .perspective {
+    &__scrollable {
+      width: 100%;
+      overflow-x: auto;
+    }
+    &__table {
+      width: 770px;
+    }
+  }
+}

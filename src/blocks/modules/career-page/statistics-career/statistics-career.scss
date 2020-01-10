@@ -115,19 +115,26 @@
     }
     &__text {
       margin-top: $pdLarge * 2;
+      font-size: $fontSizeReg;
+      text-align: center;
     }
   }
 }
 @media screen and (max-width: 600px) {
   .statistics-career {
+    &__card {
+      max-width: 220px;
+    }
     &__text {
       margin-top: $pdLarge;
-      text-align: left;
     }
     &__stat-card {
       padding-left: 0;
       margin-top: $pdLarge;
       margin-bottom: 0;
+    }
+    &__row--pd {
+      margin-top: $pdLarge;
     }
   }
 }

@@ -1,0 +1,63 @@
+.capital {
+  position: relative;
+  padding-bottom: 230px;
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .career-conclusion__text;
+  }
+  &__record {
+
+  }
+  &__record--text {
+    margin-top: $pdBig;
+    text-align: center;
+  }
+  &__record--btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: $pdLarge * 2;
+  }
+  &__record--btn {
+    @extend .btn;
+    @extend .btn__primary;
+    min-width: 260px;
+    flex: 0 1 auto;
+    margin: 0 $pdReg;
+  }
+  &__farewell {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url("../img/images/career__art6.png");
+    background-position: center bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .capital {
+    padding-bottom: 230px;
+    &__record--btn-group {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__record--btn {
+      min-width: auto;
+      flex: 0 0 auto;
+      margin: 0 0 $pdMed 0;
+      padding-left: $pdLarge;
+      padding-right: $pdLarge;
+    }
+  }
+}

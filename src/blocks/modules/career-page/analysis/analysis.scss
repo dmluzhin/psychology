@@ -5,29 +5,30 @@
   &__row {
     @include row-flex();
     margin-bottom: $pdLarge * 2;
+    position: relative;
   }
   &__col-3 {
     @include col();
     @include size-xl(3);
     @include size-lg(3);
-    @include size-md(3);
-    @include size-sm(3);
+    @include size-md(6);
+    @include size-sm(6);
     @include size-xs(12);
   }
   &__col-4 {
     @include col();
     @include size-xl(4);
     @include size-lg(4);
-    @include size-md(4);
-    @include size-sm(4);
+    @include size-md(6);
+    @include size-sm(6);
     @include size-xs(12);
   }
   &__col-5 {
     @include col();
     @include size-xl(5);
     @include size-lg(5);
-    @include size-md(5);
-    @include size-sm(5);
+    @include size-md(12);
+    @include size-sm(12);
     @include size-xs(12);
   }
   &__col-6 {
@@ -49,8 +50,6 @@
   &__text {
     @extend .text;
     text-align: center;
-  }
-  &__info {
   }
   &__info--list {
     @extend .list;
@@ -106,6 +105,17 @@
       left: -1px;
     }
   }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -50px;
+    background-image: url("../img/images/career-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 @media screen and (max-width: 992px) {
   .analysis {
@@ -115,18 +125,18 @@
     &__card {
       margin-bottom: $pdLarge;
     }
-  }
-}
-@media screen and (max-width: 600px) {
-  .analysis {
+    &__column {
+      padding: 0 $pdLarge;
+    }
     &__column--divided {
-      padding-left: 0;
       padding-top: $pdLarge;
     }
     &__column--divider {
       height: 3px;
       left: 0;
-      width: calc(100% - 10px);
+      right: 0;
+      margin: auto;
+      width: calc(100% - 70px);
       &:before {
         top: -5px;
         left: -5px;
@@ -136,6 +146,24 @@
         left: auto;
         bottom: -1px;
       }
+    }
+    &__bg {
+      background-image: url("../img/images/career-bg1.png");
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .analysis {
+    padding-top: 0;
+    &__column {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__column--divider {
+      width: calc(100% - 10px);
+    }
+    &__card {
+      box-shadow: none;
     }
   }
 }

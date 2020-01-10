@@ -1,92 +1,133 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  /*MOZ 64 + srcoller*/
+  scrollbar-width: thin;
+  scrollbar-color: $gr400 $gr200;
+  /*Webkit scrollers*/
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+    background-color: $gr500;
+    border-radius: 12px;
+    border: 1px solid $gr400
+  }
 }
+
 html, body {
-    height: 100%;
+  height: 100%;
 }
+
 body {
-    font-family: $monseratt;
-    background-color: $white;
-    color: $black;
-    overflow-x: hidden;
-    font-weight: 500;
+  font-family: $monseratt;
+  background-color: $white;
+  color: $black;
+  overflow-x: hidden;
+  font-weight: 500;
 }
+
 h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 a {
-    color: $black;
-    text-transform: none;
+  color: $black;
+  text-transform: none;
 }
+
 .container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1200));
+  @include container();
+  @include sm(max-width, rem(510));
+  @include md(max-width, rem(690));
+  @include lg(max-width, rem(930));
+  @include xl(max-width, rem(1200));
 }
+
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
+
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
+
 section, .section {
-    padding: $pdSection 0;
-    &__white {
-        background-color: $white;
-    }
-    &__blue {
-        background-color: $primary;
-    }
-    &__blue--bg {
-        background-image: url("../img/images/bg.png");
-        background-position: center center;
-        background-size: auto;
-        background-repeat: repeat;
-    }
+  padding: $pdSection 0;
+
+  &__white {
+    background-color: $white;
+  }
+
+  &__blue {
+    background-color: $primary;
+  }
+
+  &__blue--bg {
+    background-image: url("../img/images/bg.png");
+    background-position: center center;
+    background-size: auto;
+    background-repeat: repeat;
+  }
 }
+
 .title {
-    font-size: $fontSizeLarge;
-    font-weight: 600;
-    line-height: 1.6;
-    text-align: center;
-    margin-bottom: $pdLarge * 2;
+  font-size: $fontSizeLarge;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: $pdLarge * 2;
 }
+
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 .text {
-    font-size: $fontSizeBase;
-    font-weight: 500;
-    line-height: 1.6;
+  font-size: $fontSizeBase;
+  font-weight: 500;
+  line-height: 1.6;
 }
+
 p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-weight: 500
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 500
 }
+
 p.paragraph {
-    margin-bottom: $pdMed;
+  margin-bottom: $pdMed;
 }
+
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
+
 ul.list {
-    padding-left: 20px;
-    li {
-        line-height: 1.6;
-    }
+  padding-left: 20px;
+
+  li {
+    line-height: 1.6;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .title {
-        font-size: $fontSizeBase + 2px;
-        margin-bottom: $pdLarge;
+  section, .section {
+    padding: $pdLarge 0;
+  }
+  .title {
+    font-size: $fontSizeBase + 2px;
+    margin-bottom: $pdLarge;
+    br {
+      display: none;
     }
+  }
 }

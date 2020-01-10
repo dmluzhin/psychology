@@ -1,0 +1,151 @@
+.time {
+  &__container {
+    @extend .container;
+    overflow: hidden;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(3);
+    @include size-lg(3);
+    @include size-md(3);
+    @include size-sm(3);
+    @include size-xs(6);
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+  &__col--card {
+    position: relative;
+  }
+  &__card {
+    padding: 0 $pdLarge;
+  }
+  &__card--content {
+    padding-bottom: $pdLarge;
+  }
+  &__card--title {
+    font-size: $fontSizeBig;
+  }
+  &__card--subtitle {
+    font-size: $fontSizeBig;
+    color: lighten($textGray, 10%);
+    margin-bottom: $pdMed;
+  }
+  &__card--divider {
+    position: absolute;
+    bottom: 0;
+    left: $pdLarge;
+    width: 110%;
+    height: 3px;
+    background: $primary;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: $white;
+      top: -6px;
+      width: 8px;
+      height: 8px;
+      border: 3px solid $primary;
+      border-radius: 50%;
+    }
+  }
+  &__card--small {
+    padding: $pdLarge 0 $pdLarge $pdLarge;
+  }
+  &__art {
+    margin-top: $pdBig;
+  }
+  &__art--card {
+    padding-left: $pdLarge;
+  }
+  &__art--image {
+    margin-bottom: $pdLarge;
+  }
+  &__art--text p{
+    font-weight: 600;
+  }
+@media screen and (max-width: 1200px) {
+  .time {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+}
+@media screen and (max-width: 992px) {
+  .time {
+    &__container {
+      max-width: 100%;
+    }
+    &__card--title, &__card--subtitle {
+      font-size: $fontSizeLarge;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .time {
+    &__card {
+      padding: 0;
+    }
+    &__card--divider {
+      left: 0;
+    }
+    &__card--small {
+      padding-left: 0;
+    }
+    &__art--card {
+      padding-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .time {
+    &__row {
+      overflow-x: visible;
+    }
+    &__card--title, &__card--subtitle {
+      font-size: $fontSizeBase + 2px;
+    }
+    &__col--card {
+      background-color: $white;
+      box-shadow: $shadowDp3;
+      margin-bottom: $pdLarge;
+      padding: $pdMed $pdLarge $pdMed $pdLarge * 2;
+    }
+    &__card--small {
+      padding: $pdMed 0 $pdBase 0;
+    }
+    &__card--divider {
+      left: 30px;
+      top: 15px;
+      width: 3px;
+      height: 110%;
+      z-index: 1;
+      &:before {
+        top: -4px;
+        left: -5px;
+      }
+    }
+    &__art {
+      margin-top: $pdLarge;
+    }
+    &__art--card {
+      margin-bottom: $pdLarge;
+    }
+    &__art--text p {
+      font-size: $fontSizeReg;
+    }
+  }
+}
