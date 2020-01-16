@@ -1,6 +1,7 @@
 .support-record {
   @extend .capital;
   padding-top: 0;
+  box-shadow: inset 0px -30px 30px -30px rgba(0,0,0,0.2);
   &__container {
     @extend .container;
   }
@@ -13,6 +14,7 @@
 
   &__record--text {
     @extend .capital__record--text;
+    margin-top: 0 !important;
   }
   &__record--btn-group {
     @extend .capital__record--btn-group;

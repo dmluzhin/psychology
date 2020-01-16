@@ -7,7 +7,8 @@
     @extend .container;
   }
   &__title {
-    @extend .pricing__title;
+    @extend .title;
+    color: $white;
   }
   &__text {
     @extend .pricing__info;

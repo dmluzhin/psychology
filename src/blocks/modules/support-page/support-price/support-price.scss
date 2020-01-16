@@ -1,6 +1,6 @@
 .support-price {
   &__container {
-    @extend .contaier;
+    @extend .container;
   }
   &__title {
     @extend .title;
@@ -14,7 +14,68 @@
     @include size-xl(10);
     @include size-lg(10);
     @include size-md(10);
-    @include size-sm(10);
+    @include size-sm(12);
     @include size-xs(12)
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(12);
+    @include size-xs(12)
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12)
+  }
+  &__card {
+    background-color: $white;
+    box-shadow: $shadowDp3;
+    padding: $pdBig $pdLarge;
+    text-align: center;
+  }
+  &__card--price {
+    font-size: $fontSizeBig;
+    margin-bottom: $pdBig;
+    font-weight: 600;
+  }
+  &__card--subtitle p {
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: $pdReg;
+  }
+  &__card--phone {
+    font-weight: 600;
+    font-size: $fontSizeBase;
+    margin-bottom: $pdLarge + $pdMed;
+  }
+  &__card--btn {
+    @extend .btn;
+    @extend .btn__primary;
+    margin-bottom: $pdBig;
+    width: 100%;
+    max-width: 360px;
+  }
+  &__card--content {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 992px) {
+  .support-price {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .support-price {
+    &__card--content {
+      margin-bottom: $pdReg;
+    }
   }
 }
