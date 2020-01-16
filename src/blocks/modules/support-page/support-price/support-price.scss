@@ -1,0 +1,20 @@
+.support-price {
+  &__container {
+    @extend .contaier;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__col-10 {
+    @include col();
+    @include size-xl(10);
+    @include size-lg(10);
+    @include size-md(10);
+    @include size-sm(10);
+    @include size-xs(12)
+  }
+}

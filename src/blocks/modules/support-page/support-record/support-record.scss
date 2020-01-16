@@ -1,0 +1,26 @@
+.support-record {
+  @extend .capital;
+  padding-top: 0;
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .career-conclusion__text;
+  }
+
+  &__record--text {
+    @extend .capital__record--text;
+  }
+  &__record--btn-group {
+    @extend .capital__record--btn-group;
+  }
+  &__record--btn {
+    @extend .capital__record--btn
+  }
+  &__farewell {
+    @extend .capital__farewell
+  }
+}
