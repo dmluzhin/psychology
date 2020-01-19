@@ -1,0 +1,15 @@
+.consult-count {
+  width: 100%;
+  background: linear-gradient(#ffffff 50%, rgba(#c2c2c2, .2) 0%);
+  background-size: 100% 80px;
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__title {
+    @extend .title;
+  }
+}

@@ -1,0 +1,69 @@
+.consult-full-hero {
+  @extend .hero;
+  &__container {
+    @extend .container;
+    height: 100%;
+  }
+  &__row {
+    @include row-flex();
+    z-index: 1;
+    position: relative;
+  }
+  &__col {
+    @include col();
+    @include size-lg(6);
+    @include size-md(9);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__bg {
+    @extend .container;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/images/consult-full-art1.png");
+    background-position: right center;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  &__content {}
+  &__defenition {
+    @extend .hero__defenition;
+  }
+  &__paragraph {
+    @extend .hero__paragraph;
+  }
+  &__title {
+    @extend .hero__title;
+  }
+  &__highlighted {
+    @extend .hero__highlighted;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .consult-full-support {
+    padding: 60px 0;
+    &__bg {
+      background-size: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .consult-full-support {
+    padding: $pdMed 0;
+    &__bg {
+      position: static;
+      width: 100%;
+      height: 270px;
+      background-position: center center;
+      background-size: 320px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.consult-full-pricing {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    font-size: $fontSizeLarge;
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    margin-bottom: $pdLarge * 2;
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  &__tabs--content {
+    flex-basis: 66%;
+    flex: 1 0 auto;
+  }
+  &__tabs--controls {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.3%;
+    max-width: 360px;
+    margin-left: $pdLarge;
+    flex-shrink: 1;
+  }
+  &__tabs--row {
+    @include row-flex();
+  }
+  &__tabs--col {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+  &__tabs--col-lg {
+    @include col();
+    @include size(12);
+  }
+
+
+  &__card {
+    min-width: 240px;
+  }
+  &__card--item {
+    width: 100%;
+    margin-bottom: 3px;
+    background-color: $white;
+    padding: $pdLarge;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__card--price {
+    font-size: $fontSizeBig;
+    font-weight: 500;
+  }
+  &__card--text.pricing__card--text-bold {
+    font-weight: 600;
+  }
+  &__control {
+    display: block !important;
+    @extend .btn;
+    @extend .btn__inline;
+    margin-bottom: $pdLarge;
+  }
+  &__links {
+    margin-top: 66px;
+  }
+  &__link {
+    @extend .btn;
+    @extend .btn__secondary;
+    width: 100%;
+    margin-bottom: $pdMed;
+  }
+  &__info {
+    font-size: $fontSizeBase;
+    font-weight: 500;
+    line-height: 1.6;
+    color: $white;
+    text-align: center;
+    margin-top: $pdMed;
+  }
+}
+@media screen and (max-width: 992px) {
+  .pricing {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
