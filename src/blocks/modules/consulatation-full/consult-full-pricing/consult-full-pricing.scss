@@ -34,7 +34,7 @@
     @include size-xl(6);
     @include size-lg(6);
     @include size-md(6);
-    @include size-sm(6);
+    @include size-sm(12);
     @include size-xs(12);
   }
   &__tabs--col-lg {
@@ -60,7 +60,7 @@
     font-weight: 500;
   }
   &__card--text {
-    font-weight: 300;
+    font-weight: 500;
   }
   &__card--text.consult-full-pricing__card--text-bold {
     font-weight: 600;
@@ -93,9 +93,35 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .pricing {
+  .consult-full-pricing {
     &__container {
       max-width: 100%;
+    }
+    &__card--price {
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .consult-full-pricing {
+    &__tabs {
+      flex-wrap: wrap;
+    }
+    &__tabs--controls {
+      margin-left: 0;
+      margin-top: $pdLarge;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    &__links {
+      margin-top: $pdLarge;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__link {
+      width: 100%;
+      max-width: 450px;
     }
   }
 }

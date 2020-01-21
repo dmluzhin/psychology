@@ -17,6 +17,10 @@
   &__right {
     text-align: right !important;
   }
+  &__teal {
+    color: #C2C2C2;
+    font-weight: 300;
+  }
 }
 .taxonomi {
   font-size: $fontSizeBase;
@@ -85,3 +89,9 @@
   background-color: $white;
   box-shadow: $shadowDp3;
 }
+
+.highlighted {
+  color: $primary;
+  font-weight: 600;
+}
+

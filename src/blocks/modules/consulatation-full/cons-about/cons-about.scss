@@ -1,0 +1,121 @@
+.cons-about {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+    position: relative;
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(12);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-8 {
+    @include col();
+    @include size-xl(8);
+    @include size-lg(8);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__list {
+    @extend .list;
+    margin-bottom: $pdLarge * 2;
+    position: relative;
+    padding-left: 40px !important;
+  }
+  &__list--item {
+    @extend .list__item;
+    margin-bottom: $pdLarge;
+    font-size: $fontSizeBase !important;
+  }
+  &__divider {
+    width: 3px;
+    height: 100%;
+    background-color: $primary;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: -10px;
+      width: 25px;
+      height: 25px;
+      border: 3px solid $primary;
+      border-radius: 50%;
+      background-color: $white;
+      background-size: 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: -1px;
+      width: 5px;
+      height: 5px;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+  }
+  &__divider--top:before {
+    background-image: url("../img/svg/check.svg");
+
+  }
+  &__divider--bottom {
+    background-color: $textGray;
+    &:before {
+      background-image: url("../img/svg/cross.svg");
+      border-color: $textGray;
+    }
+    &:after {
+      background-color: $textGray;
+    }
+  }
+  .highlighted {
+    margin-bottom: $pdLarge;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cons-about {
+    &__container {
+      max-width: calc(100% - 60px);
+    }
+    &__row {
+      position: relative;
+    }
+    &__list {
+      position: static;
+      margin-bottom: $pdMed;
+    }
+    &__list--item {
+      font-size: $fontSizeReg !important;
+    }
+    &__divider {
+      height: calc(100% - 50px);
+      left: 0;
+    }
+    &__col-6 {
+      margin-bottom: $pdLarge;
+    }
+  }
+}
