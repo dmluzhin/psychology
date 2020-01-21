@@ -51,6 +51,24 @@
   }
 }
 
+.mb {
+  &-3 {
+    margin-bottom: $pdBase * 3;
+  }
+  &-4 {
+    margin-bottom: $pdBase * 4;
+  }
+  &-5 {
+    margin-bottom: $pdBase * 5;
+  }
+  &-6 {
+    margin-bottom: $pdBase * 6;
+  }
+  &-12 {
+    margin-bottom: $pdBase * 12;
+  }
+}
+
 .list {
   &__item {
     font-size: $fontSizeReg;

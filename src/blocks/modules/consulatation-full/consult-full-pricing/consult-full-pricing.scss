@@ -59,7 +59,10 @@
     font-size: $fontSizeBig;
     font-weight: 500;
   }
-  &__card--text.pricing__card--text-bold {
+  &__card--text {
+    font-weight: 300;
+  }
+  &__card--text.consult-full-pricing__card--text-bold {
     font-weight: 600;
   }
   &__control {
@@ -67,6 +70,9 @@
     @extend .btn;
     @extend .btn__inline;
     margin-bottom: $pdLarge;
+  }
+  &__control--item {
+    color: $white;
   }
   &__links {
     margin-top: 66px;
