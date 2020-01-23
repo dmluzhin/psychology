@@ -1,4 +1,7 @@
 .consult-full-pricing {
+  position: relative;
+  box-shadow: $shadowDp3;
+  z-index: 1;
   &__container {
     @extend .container;
   }
@@ -28,6 +31,7 @@
   }
   &__tabs--row {
     @include row-flex();
+    @include md(justify-content, center);
   }
   &__tabs--col {
     @include col();
@@ -122,6 +126,17 @@
     &__link {
       width: 100%;
       max-width: 450px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .consult-full-pricing {
+    &__tabs--col {
+      margin-bottom: $pdReg;
+    }
+    &__tabs--content {
+      flex-basis: auto;
+      flex: 0 1 auto;
     }
   }
 }

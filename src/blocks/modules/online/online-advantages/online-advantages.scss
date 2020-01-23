@@ -1,0 +1,72 @@
+.online-advantages {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+    margin-bottom: 20px;
+  }
+  &__col-5 {
+    @include col();
+    @include size-xl(5);
+    @include size-lg(5);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-7 {
+    @include col();
+    @include size-xl(7);
+    @include size-lg(7);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__card {
+    @extend .card;
+    padding: $pdLarge + $pdMed $pdLarge;
+    height: 100%;
+  }
+  &__card--title {
+    font-size: $fontSizeBase;
+    color: $primary;
+    font-weight: 600;
+    margin-bottom: $pdBase;
+  }
+  &__card--subtitle {
+    font-size: $fontSizeBase;
+    font-weight: 300;
+    margin-bottom: $pdLarge;
+    color: #B6B6B6;
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: $pdLarge;
+  }
+  &__defenition {
+    border-left: 3px solid $primary;
+    padding-left: $pdLarge;
+  }
+}
+@media screen and (max-width: 992px) {
+  .online-advantages {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .online-advantages {
+    &__col-5, &__col-7 {
+      margin-bottom: $pdLarge;
+    }
+    &__row {
+      margin-bottom: 0;
+    }
+  }
+}
