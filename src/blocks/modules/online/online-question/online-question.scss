@@ -1,0 +1,108 @@
+.online-question {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: $pdLarge * 2;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(5);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__card {
+    @extend .card;
+    padding: $pdLarge + $pdMed $pdLarge;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__card--title {
+    font-size: $fontSizeBase;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: $pdBase;
+  }
+  &__card--subtitle {
+    font-size: $fontSizeBase;
+    font-weight: 300;
+    color: #B6B6B6;
+    margin-bottom: $pdLarge;
+  }
+  &__card--list {
+
+  }
+  &__list--item {
+    position: relative;
+    padding-bottom: $pdLarge;
+    padding-left: $pdLarge + $pdMed;
+    font-weight: 400;
+    line-height: 1.6;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 3px solid $primary;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      align-content: center;
+      color: #B6B6B6;
+      font-weight: 500;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $primary;
+      z-index: 0;
+    }
+    &:last-child:after {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      top: 30px;
+    }
+    &:first-child:before {
+      content: '1';
+    }
+    &:nth-child(2):before {
+      content: '2';
+    }
+    &:last-child:before {
+      content: '3';
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .online-question {
+    &__card--title, &__card--subtitle {
+      font-size: $fontSizeReg;
+      text-align: center;
+    }
+    &__list--item {
+      font-size: $fontSizeReg;
+    }
+  }
+}

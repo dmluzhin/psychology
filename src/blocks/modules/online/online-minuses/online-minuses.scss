@@ -1,0 +1,50 @@
+.online-minuses {
+  padding-top: 240px !important;
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__col-5 {
+    @include col();
+    @include size-xl(5);
+    @include size-lg(5);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-7 {
+    @include col();
+    @include size-xl(7);
+    @include size-lg(7);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__title {
+    font-size: $fontSizeLarge;
+    color: $white;
+    font-weight: normal;
+  }
+  &__list--item {
+    position: relative;
+    padding-left: 90px;
+    @extend .paragraph;
+    color: $white;
+    margin-bottom: $pdLarge;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  &__list--style {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: -20px;
+    left: 0;
+  }
+}
