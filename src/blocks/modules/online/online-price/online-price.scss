@@ -1,0 +1,138 @@
+.online-price {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(12);
+    @include size-sm(12);
+    @include size-xs(12);
+    &:first-child {
+      .online-price__card--divider:before {
+        background-image: url("../img/images/online-art10.png");
+      }
+    }
+    &:nth-child(2) {
+      .online-price__card--divider:before {
+        background-image: url("../img/images/online-art11.png");
+      }
+    }
+    &:last-child {
+      .online-price__card--divider:before {
+        background-image: url("../img/images/online-art12.png");
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    padding-left: $pdLarge * 2;
+    padding-top: $pdReg * 10;
+    height: 100%;
+  }
+  &__card--divider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: $primary;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid $primary;
+      background-color: $white;
+      background-size: 50px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: -6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 3px solid $primary;
+      background-color: $white;
+    }
+  }
+  &__card--title {
+    font-size: $fontSizeBig;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: $pdMed;
+  }
+  &__card--subtitle {
+    font-weight: 600;
+  }
+  &__card--text {
+    margin-bottom: $pdMed;
+  }
+  &__card--link {
+    position: relative;
+    display: block;
+    padding: $pdLarge 0;
+    cursor: pointer;
+  }
+  &__card--circle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    background-color: $white;
+    box-shadow: $shadowDp1;
+    transition: $transitionShadow;
+    background-size: 35px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../img/images/online-art13.png");
+    border-radius: 50%;
+    &:hover {
+      box-shadow: $shadowDp3;
+    }
+    &:active {
+      box-shadow: $shadowDp2;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .online-price {
+    &__col-4 {
+      margin-bottom: $pdLarge;
+    }
+    &__card--title {
+      font-size: 32px;
+    }
+    &__card--subtitle {
+      font-size: $fontSizeReg;
+    }
+    &__card--link {
+      font-size: $fontSizeReg;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .online-price {
+    &__card--divider {
+      left: 30px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.online-demand {
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  &__col-6 {
+    @include col();
+    @include size-xl(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-xs(12);
+    margin-bottom: $pdLarge;
+  }
+  &__card {
+    @extend .online-advantages__card;
+  }
+  &__card--title {
+    @extend .online-advantages__card--title;
+    color: $black;
+    margin-bottom: $pdLarge;
+    line-height: 1.4;
+  }
+  &__card--img {
+    @extend .online-advantages__img;
+    img {
+      margin: 0 auto;
+    }
+  }
+  &__card--list {
+    @extend .list;
+    border-left: 3px solid $primary;
+    padding-left: $pdLarge + $pdReg * 2 !important;
+  }
+  &__list--item {
+    @extend .list__item;
+    margin-bottom: 0 !important;
+    font-size: $fontSizeBase !important;
+  }
+  &__box {
+    padding: $pdLarge + $pdMed $pdLarge $pdLarge $pdLarge + $pdReg * 2;
+    height: 100%;
+    .online-demand__card--list {
+      padding-left: 20px !important;
+      border-left: none;
+    }
+    .online-demand__list--item {
+      margin-bottom: $pdLarge !important;
+    }
+  }
+  &__box--title {
+    @extend .online-advantages__card--title;
+    margin-bottom: $pdLarge;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .online-demand {
+    &__container {
+      max-width: 100%;
+    }
+    &__list--item {
+      font-size: $fontSizeReg !important;
+    }
+  }
+}
