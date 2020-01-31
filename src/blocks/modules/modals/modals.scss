@@ -1,0 +1,82 @@
+.modal {
+  &__overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: $primary;
+    &.active {
+      display: block;
+    }
+  }
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    max-height: 768px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: $pdLarge;
+  }
+  &__box {
+    @extend .card;
+    position: relative;
+    width: 100%;
+    padding: $pdLarge + $pdMed $pdLarge * 2 $pdMed + $pdReg $pdLarge * 2;
+  }
+  &__title {
+    font-size: $fontSizeLarge;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: $pdLarge;
+    text-align: center;
+  }
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: $white;
+      transform: translateY(7px) rotate(45deg);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: $white;
+      transform: translateY(7px) rotate(135deg);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@import "write-modal/write-modal";

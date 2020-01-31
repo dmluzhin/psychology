@@ -1,0 +1,64 @@
+<div class="modal__wrapper write-modal">
+	<form class="write-modal__form">
+		<div class="write-modal__container">
+			<div class="write-modal__title">Сообщение Андрею Гунявину</div>
+			<div class="write-modal__progress">
+				<div class="write-modal__progress--step">
+					<div class="write-modal__progress--sign">
+						<div class="write-modal__progress--icon">
+							<svg class="icon"><use xlink:href="#fa-envelope"></use></svg>
+						</div>
+						<div class="write-modal__progress--text">Ваше сообщение</div>
+					</div>
+				</div>
+				<div class="write-modal__progress--step">
+					<div class="write-modal__progress--sign">
+						<div class="write-modal__progress--icon">
+							<svg class="icon"><use xlink:href="#fa-user"></use></svg>
+						</div>
+						<div class="write-modal__progress--text">Ваши контакты</div>
+					</div>
+				</div>
+				<div class="write-modal__progress--finish"></div>
+			</div>
+			<div class="write-modal__stepper--box">
+				<div class="write-modal__stepper">
+					<div class="write-modal__step write-modal__step-first">
+						<div class="write-modal__form">
+							<div class="write-modal__form--control">
+								<textarea class="write-modal__form--textarea" placeholder="Сообщение..."></textarea>
+							</div>
+						</div>
+						<div class="write-modal__stepper--footer">
+							<div class="write-modal__btn--next" id="step-message">Далее</div>
+						</div>
+					</div>
+
+					<div class="write-modal__step write-modal__step--second">
+						<div class="write-modal__form">
+							<div class="write-modal__form--control">
+								<input class="write-modal__form--input" placeholder="Ваши имя и фамилия?">
+							</div>
+							<div class="write-modal__form--control">
+								<input class="write-modal__form--input" placeholder="Ваш телефон?">
+							</div>
+							<div class="write-modal__form--control">
+								<input class="write-modal__form--input" placeholder="Ваш email?">
+							</div>
+						</div>
+						<div class="write-modal__stepper--footer">
+							<div class="write-modal__btn--next" id="step-send">Отправить</div>
+						</div>
+					</div>
+					<div class="write-modal__step write-modal__step--final">
+						<div class="write-modal__success">Ваше сообщение успешно отправлено!</div>
+						<div class="write-modal__stepper--footer">
+							<div class="write-modal__btn" id="step-success">Вернуться на сайт</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="write-modal__close"></div>
+	</form>
+</div>

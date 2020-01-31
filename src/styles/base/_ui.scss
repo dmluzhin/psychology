@@ -94,7 +94,9 @@
   color: $primary;
   font-weight: 600;
 }
-
+.overflow {
+  overflow: hidden !important;
+}
 @media screen and (max-width: 1200px) {
   .taxonomi {
     font-size: $fontSizeReg;
