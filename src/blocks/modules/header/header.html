@@ -9,7 +9,7 @@
 			<div class="navbar__menu--start">
 				<ul class="navbar__nav">
 					<li class="navbar__item">
-						<a href="#" class="navbar__link active">Услуги</a>
+						<a href="#" class="navbar__link active" id="services">Услуги</a>
 					</li>
 					<li class="navbar__item">
 						<a href="#" class="navbar__link">Если Вы в 1-ый раз</a>
@@ -36,17 +36,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="navbar__hamburger">
-			<div class="navbar__hamburger--line"></div>
-			<div class="navbar__hamburger--line"></div>
-			<div class="navbar__hamburger--line"></div>
-		</div>
-	</div>
-	<div class="subheader">
-		<div class="subheader__container">
+		<div class="subheader__hidden">
 			<div class="subheader__menu">
 				<ul class="subheader__nav">
-					<li class="subheader__nav--item"><a href="/" class="subheader__nav--link">Психологическое
+					<li class="subheader__nav--item subheader__nav--item-trigger"><a href="/" class="subheader__nav--link">Психологическое
 						консультирование</a></li>
 					<li class="subheader__nav--item"><a href="career.html" class="subheader__nav--link">Карьерное
 						консультирование</a></li>
@@ -54,9 +47,19 @@
 						развитие</a></li>
 					<li class="subheader__nav--item"><a href="support.html" class="subheader__nav--link">Эмоциональная
 						поддержка</a></li>
-					<li class="subheader__nav--item"><a href="consultation-full.html" class="subheader__nav--link">Очно</a></li>
+				</ul>
+
+				<ul class="subheader__nav subheader__nav--hidden">
+					<li class="subheader__nav--item subheader__nav--back"><a href="#" class="subheader__nav--link subheader__nav--link-back">Психологическое консультирование</a></li>
+					<li class="subheader__nav--item subheader__online-nav--item"><a href="online.html" class="subheader__nav--link">Консультация Online</a></li>
+					<li class="subheader__nav--item subheader__online-nav--item"><a href="consultation-full.html" class="subheader__nav--link">Консультация очно в кабинете</a></li>
 				</ul>
 			</div>
+		</div>
+		<div class="navbar__hamburger">
+			<div class="navbar__hamburger--line"></div>
+			<div class="navbar__hamburger--line"></div>
+			<div class="navbar__hamburger--line"></div>
 		</div>
 	</div>
 </header>

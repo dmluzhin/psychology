@@ -11,6 +11,8 @@
     @include size-md(12);
     @include size-sm(12);
     @include size-xs(12);
+    margin-left: auto;
+    margin-right: auto;
   }
   &__btn--col {
     display: flex;
