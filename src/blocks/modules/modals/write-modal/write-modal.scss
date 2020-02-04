@@ -98,49 +98,8 @@
       }
     }
   }
-  &__progress--sign {
-    position: absolute;
-    left: 0;
-    top: 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  &__progress--icon {
-    .icon {
-      fill: #C2C2C2;
-      width: 25px;
-      height: 19px;
-    }
-  }
-  &__progress--text {
-    color: #C2C2C2;
-    font-size: $fontSizeBase;
-    font-weight: 500;
-    margin-left: $pdReg;
-  }
-  &__stepper {
-    display: flex;
-    width: 300%;
-    height: 320px;
-    position: relative;
-    transition: all .3s;
-  }
-  &__stepper--box {
-    width: 100%;
-    overflow: hidden;
-  }
-  &__step {
-    padding-bottom: 50px;
-    position: relative;
-    width: 33.33333%;
-    height: 100%;
-  }
   &__close {
     @extend .modal__close;
-  }
-  &__stepper--footer {
-    @extend .modal__footer;
   }
   &__btn {
     @extend .btn;
@@ -148,6 +107,7 @@
     padding-left: 20px !important;
     padding-right: 20px !important;
     position: relative;
+    box-shadow: none !important;
   }
   &__btn--next {
     @extend .btn;
@@ -155,6 +115,7 @@
     padding-left: 20px !important;
     padding-right: 40px !important;
     position: relative;
+    box-shadow: none !important;
     &:after {
       content: '';
       position: absolute;

@@ -68,8 +68,31 @@
 	</div>
 </footer>
 
-<div class="modal__overlay">
+<!--write modal-->
+<div class="modal__overlay animated fadeIn" id="write-modal">
 	<div class="modal__container">
 		@@include("../modals/write-modal/write-modal.html")
+		<div class="modal__bg1 animated fadeIn"></div>
+		<div class="modal__bg2 animated fadeIn"></div>
+		<div class="modal__bg3 animated fadeIn"></div>
 	</div>
+</div>
+
+<!--ask modal-->
+<div class="modal__overlay animated fadeIn" id="ask-modal">
+	<div class="modal__container">
+		@@include("../modals/ask-modal/ask-modal.html")
+		<div class="modal__bg1 animated fadeIn"></div>
+		<div class="modal__bg2 animated fadeIn"></div>
+		<div class="modal__bg3 animated fadeIn"></div>
+	</div>
+</div>
+
+<!--404 modal-->
+<div class="modal__overlay modal__404 animated fadeIn">
+	<div class="modal__container">
+		@@include("../modals/modal-404/modal-404.html")
+		<div class="modal__bg4"></div>
+	</div>
+	<div class="modal__bg5"></div>
 </div>

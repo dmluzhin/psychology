@@ -1,0 +1,15 @@
+.modal-404 {
+  &__title {
+   @extend .modal__title;
+    text-align: left !important;
+  }
+  &__container {
+    @extend .modal__box;
+  }
+  &__close {
+    @extend .modal__close;
+  }
+  &__success {
+    @extend .ask-modal__success;
+  }
+}

@@ -1,0 +1,64 @@
+<div class="modal__wrapper ask-modal">
+	<form class="ask-modal__form">
+		<div class="ask-modal__container">
+			<div class="ask-modal__title">Задать вопрос Андрею Гунявину</div>
+			<div class="modal__progress">
+				<div class="modal__progress--step">
+					<div class="modal__progress--sign">
+						<div class="modal__progress--icon">
+							<svg class="icon"><use xlink:href="#fa-envelope"></use></svg>
+						</div>
+						<div class="modal__progress--text">Ваше сообщение</div>
+					</div>
+				</div>
+				<div class="modal__progress--step">
+					<div class="modal__progress--sign">
+						<div class="modal__progress--icon">
+							<svg class="icon"><use xlink:href="#fa-user"></use></svg>
+						</div>
+						<div class="modal__progress--text">Ваши контакты</div>
+					</div>
+				</div>
+				<div class="modal__progress--finish"></div>
+			</div>
+			<div class="modal__stepper--box">
+				<div class="modal__stepper">
+					<div class="modal__step modal__step-first">
+						<div class="ask-modal__form">
+							<div class="ask-modal__form--control">
+								<textarea class="ask-modal__form--textarea" placeholder="Сообщение..."></textarea>
+							</div>
+						</div>
+						<div class="modal__stepper--footer">
+							<div class="ask-modal__btn--next step-message" id="ask-message">Далее</div>
+						</div>
+					</div>
+
+					<div class="modal__step modal__step--second">
+						<div class="ask-modal__form">
+							<div class="ask-modal__form--control">
+								<input class="ask-modal__form--input" placeholder="Ваши имя и фамилия?">
+							</div>
+							<div class="ask-modal__form--control">
+								<input class="ask-modal__form--input" placeholder="Ваш телефон?">
+							</div>
+							<div class="ask-modal__form--control">
+								<input class="ask-modal__form--input" placeholder="Ваш email?">
+							</div>
+						</div>
+						<div class="modal__stepper--footer">
+							<div class="ask-modal__btn--next step-send" id="ask-send">Отправить</div>
+						</div>
+					</div>
+					<div class="modal__step modal__step--final">
+						<div class="ask-modal__success">Ваше сообщение успешно отправлено!</div>
+						<div class="modal__stepper--footer">
+							<div class="ask-modal__btn step-success" id="ask-success">Вернуться на сайт</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ask-modal__close"></div>
+	</form>
+</div>
