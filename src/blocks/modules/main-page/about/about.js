@@ -2,7 +2,6 @@ import $ from "jquery";
 
 $(document).ready(function () {
 
-	console.log('about init');
 	// Intial Border Position
 	var activePos = $('.about__tabs--header .active').position();
 

@@ -23,7 +23,7 @@ $(document).ready(function () {
 		$('body').addClass('overflow');
 	});
 
-	$('#modal-ask').on('click', function () {
+	$('.modal-ask').on('click', function () {
 		$('#ask-modal').addClass('active');
 		$('body').addClass('overflow');
 	});

@@ -67,6 +67,8 @@
     @extend .btn;
     @extend .btn__inline;
     margin-bottom: $pdLarge;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
   }
   &__links {
     margin-top: 66px;
