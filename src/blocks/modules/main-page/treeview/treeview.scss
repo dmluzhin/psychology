@@ -2,8 +2,35 @@
   &__container {
     @extend .container;
   }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+    width: 100%;
+  }
+  &__col-5 {
+    @include col();
+    @include size-xl(5);
+    @include size-lg(5);
+    @include size-md(5);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
+  &__col-7 {
+    @include col();
+    @include size-xl(7);
+    @include size-lg(7);
+    @include size-md(7);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
   &__title {
     @extend .header__1;
+  }
+  &__group {
+    display: none;
+    &:first-of-type {
+      display: block;
+    }
   }
   &__scheme {}
   &__scheme--buttons-top, &__scheme--buttons-bottom {
@@ -29,6 +56,8 @@
     @extend .btn__primary;
     margin-right: $pdLarge;
     min-width: 260px;
+    text-decoration: none;
+    height: 54px;
     &:last-child {
       margin-right: 0;
     }
@@ -60,6 +89,7 @@
     box-shadow: $shadowDp3;
     margin-bottom: $pdMed;
     min-height: 320px;
+    height: 100%;
   }
   &__card--circle {
     position: absolute;

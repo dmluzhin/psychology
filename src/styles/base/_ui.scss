@@ -84,7 +84,13 @@
     }
   }
 }
-
+.sublist {
+  padding-left: $pdMed;
+  list-style: circle;
+  &__item {
+    font-size: 14px;
+  }
+}
 .card {
   background-color: $white;
   box-shadow: $shadowDp3;
