@@ -1,4 +1,10 @@
 .pricing {
+  background: {
+    position: center bottom;
+    //size: 100%;
+    repeat: repeat;
+    image: url("../img/images/bg.png");
+  }
   &__container {
     @extend .container;
   }
@@ -114,11 +120,107 @@
     text-align: center;
     margin-top: $pdMed;
   }
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+  &__col {
+    max-width: 360px;
+    margin-top: -115px;
+    align-self: flex-end;
+    flex: 1 1 auto;
+  }
+  &__col-text {
+    width: calc(100% - 360px);
+    flex: 1 1 auto;
+  }
 }
 @media screen and (max-width: 992px) {
   .pricing {
     &__container {
       max-width: 100%;
+    }
+    &__row {
+      flex-direction: column-reverse;
+    }
+    &__col, &__col-text {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 $pdMed;
+      p {
+        font-size: 14px;
+      }
+      .text__left {
+        text-align: center !important;
+      }
+    }
+    &__link {
+      margin: 0 auto;
+      max-width: 400px;
+      margin-bottom: $pdMed;
+    }
+  }
+}
+@media screen and (max-width: 880px) {
+  .pricing {
+    margin-top: -95px;
+    padding-top: 40px;
+    &__container {
+      padding: 0;
+    }
+    &__title {
+      font-size: $fontSizeLarger;
+    }
+    &__tabs {
+      flex-direction: column-reverse;
+    }
+    &__tabs--row {
+      flex-wrap: nowrap;
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    &__tabs--col {
+      margin: 0;
+      width: 50%;
+    }
+    &__tabs--btns {
+      overflow: hidden;
+    }
+    &__tabs--controls {
+      flex-direction: row;
+      flex-basis: 100%;
+      max-width: 100%;
+      margin: 0;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: $pdLarge;
+      padding-left: $pdMed;
+      padding-right: $pdMed;
+      margin-bottom: -$pdLarge;
+    }
+    &__card {
+      min-width: auto;
+    }
+    &__card--item {
+      padding-left: $pdMed;
+      padding-right: $pdMed;
+    }
+    &__control {
+      width: 100%;
+      flex: 1 0 auto;
+      box-shadow: none;
+      margin-right: $pdMed;
+    }
+    &__links, &__info {
+      //display: none;
+    }
+    &__col {
+      margin: 10px auto;
     }
   }
 }

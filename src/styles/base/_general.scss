@@ -20,13 +20,13 @@
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: $monseratt;
   background-color: $white;
   color: $black;
-  overflow-x: hidden;
   font-weight: 500;
 }
 
