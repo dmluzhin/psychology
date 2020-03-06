@@ -61,3 +61,34 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .form {
+    padding-right: 0;
+  }
+  .contact-form {
+    &__right-col {
+      width: 100%;
+      margin-top: $pdLarge;
+    }
+    &__video.text__right {
+      text-align: center !important;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-form {
+    padding-bottom: 0;
+    &__right-col {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .form {
+    &__control {
+      padding-left: 40px;
+    }
+    &__input {
+      font-size: $fontSizeReg;
+    }
+  }
+}

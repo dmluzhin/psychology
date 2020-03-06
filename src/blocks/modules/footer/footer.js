@@ -16,6 +16,7 @@ $(document).ready(function () {
 		$('.modal__progress--finish').removeClass('active');
 		$('.modal__bg2, .modal__bg3').hide();
 		$('.modal__bg1').show();
+		$('.modal__progress--sign').show();
 	}
 
 	$('#modal-contact').on('click', function () {
@@ -46,6 +47,7 @@ $(document).ready(function () {
 		$('.modal__progress--finish').addClass('active');
 		$('.modal__bg1, .modal__bg2').hide();
 		$('.modal__bg3').show();
+		$('.modal__progress--sign').hide();
 	});
 
 	$('.step-success').on('click', function () {

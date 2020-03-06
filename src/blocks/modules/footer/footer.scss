@@ -79,3 +79,17 @@ footer, .footer {
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .footer {
+    &__list--link {
+      font-size: $fontSizeReg;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    &__subheadline {
+      //display: none;
+    }
+  }
+}

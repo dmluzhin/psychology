@@ -48,3 +48,9 @@
     left: 0;
   }
 }
+@media screen and (max-width: 600px) {
+  .online-minuses {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -106,3 +106,19 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .online-question {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__card {
+      padding-left: $pdMed;
+      padding-right: $pdMed;
+    }
+    &__text {
+      padding-left: $pdMed;
+      padding-right: $pdMed;
+    }
+  }
+}

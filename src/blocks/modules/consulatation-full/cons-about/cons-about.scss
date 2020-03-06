@@ -119,3 +119,15 @@
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .cons-about {
+    &__col-6 {
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5102415966386555) 0%, rgba(255,255,255,1) 50%);
+
+    }
+    &__col-8 {
+      margin-bottom: -100px;
+    }
+  }
+}

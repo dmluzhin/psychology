@@ -174,11 +174,16 @@
 }
 @media screen and (max-width: 600px) {
   .progress {
+    padding-bottom: 0;
     &__box {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      margin-top: $pdLarge;
     }
     &__card {
       max-width: 100%;
+    }
+    &__bar {
+      margin-top: $pdLarge*2;
     }
     &__bar--title {
       font-size: $fontSizeSmall;

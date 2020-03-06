@@ -72,3 +72,17 @@
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .online-demand {
+    padding-bottom: 0;
+    &__container {
+      padding: 0;
+    }
+    &__box {
+      padding: 0;
+    }
+    &__list--item:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}

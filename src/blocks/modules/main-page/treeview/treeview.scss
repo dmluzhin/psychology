@@ -7,6 +7,14 @@
     @include md(justify-content, center);
     width: 100%;
   }
+  &__col {
+    @include col();
+    @include size-xl(12);
+    @include size-lg(12);
+    @include size-md(12);
+    @include size-sm(12);
+    @include size-xs(12);
+  }
   &__col-5 {
     @include col();
     @include size-xl(5);
@@ -49,7 +57,6 @@
     align-content: center;
     height: 80px;
     margin: $pdReg auto;
-
   }
   &__btn {
     @extend .btn;
@@ -164,9 +171,34 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 100%;
+    width: calc(100% - 46px);
     height: 3px;
     background-color: $primary;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -21px;
+      top: -11px;
+      width: 23px;
+      height: 25px;
+      background: {
+        image: url("../img/svg/double_arrow.svg");
+        repeat: no-repeat;
+        size: 23px 25px;
+        position: center center;
+      };
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: -14px;
+      top: -6px;
+      width: 9px;
+      height: 9px;
+      border: 3px solid $primary;
+      border-radius: 50%;
+      background-color: $white;
+    }
   }
   &__branch {
     position: absolute;

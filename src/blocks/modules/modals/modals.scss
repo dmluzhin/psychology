@@ -8,10 +8,12 @@
     left: 0;
     z-index: 999;
     background-color: $primary;
+
     &.active {
       display: block;
     }
   }
+
   &__container {
     position: absolute;
     width: 100%;
@@ -25,6 +27,7 @@
     margin: auto;
     padding: $pdLarge;
   }
+
   &__box {
     @extend .card;
     position: relative;
@@ -32,6 +35,7 @@
     padding: $pdLarge + $pdMed $pdLarge * 2 $pdMed + $pdReg $pdLarge * 2;
     z-index: 2;
   }
+
   &__title {
     font-size: $fontSizeLarge;
     font-weight: 500;
@@ -39,6 +43,7 @@
     margin-bottom: $pdLarge;
     text-align: center;
   }
+
   &__close {
     position: absolute;
     width: 20px;
@@ -46,6 +51,7 @@
     right: 5px;
     top: 5px;
     cursor: pointer;
+
     &:before {
       content: '';
       width: 100%;
@@ -56,6 +62,7 @@
       left: 0;
       top: 0;
     }
+
     &:after {
       content: '';
       width: 100%;
@@ -67,6 +74,7 @@
       top: 0;
     }
   }
+
   &__footer {
     width: 100%;
     height: 50px;
@@ -78,6 +86,7 @@
     left: 0;
     bottom: 0;
   }
+
   &__progress {
     width: 100%;
     height: 75px;
@@ -87,12 +96,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+
     &--step {
       position: relative;
       flex: 1 1 auto;
       flex-basis: 50%;
       height: 3px;
       background-color: #C2C2C2;
+
       &:before {
         content: '';
         position: absolute;
@@ -108,43 +119,55 @@
         text-align: center;
         line-height: 1.4;
       }
+
       &:first-child {
         &:before {
           content: '1';
           border-color: $primary;
         }
+
         .write-modal__progress--icon .icon {
           fill: $primary;
         }
+
         .write-modal__progress--text {
           color: $primary;
         }
       }
+
       &:nth-child(2):before {
         content: '2';
       }
+
       &:nth-child(3):before {
         content: '3';
       }
+
       &:nth-child(4):before {
         content: '3';
       }
+
       &:nth-child(5):before {
         content: '4';
       }
+
       &.active {
         background-color: $primary;
+
         &:before {
           border-color: $primary;
         }
+
         .write-modal__progress--icon .icon {
           fill: $primary;
         }
+
         .write-modal__progress--text {
           color: $primary;
         }
       }
     }
+
     &--finish {
       position: absolute;
       right: -1px;
@@ -158,18 +181,20 @@
       border-radius: 50%;
       text-align: center;
       line-height: 1.4;
-      background:  {
+      background: {
         image: url("../img/svg/check-gray.svg");
         size: 12px;
         position: center center;
         repeat: no-repeat;
       };
+
       &.active {
         border-color: $primary;
         background-image: url("../img/svg/check.svg");
       }
     }
   }
+
   &__progress--sign {
     position: absolute;
     left: 0;
@@ -178,6 +203,7 @@
     justify-content: flex-start;
     align-items: center;
   }
+
   &__progress--icon {
     .icon {
       fill: #C2C2C2;
@@ -185,12 +211,14 @@
       height: 19px;
     }
   }
+
   &__progress--text {
     color: #C2C2C2;
     font-size: $fontSizeBase;
     font-weight: 500;
     margin-left: $pdReg;
   }
+
   &__stepper {
     display: flex;
     width: 300%;
@@ -198,19 +226,23 @@
     position: relative;
     transition: all .3s;
   }
+
   &__stepper--box {
     width: 100%;
     overflow: hidden;
   }
+
   &__step {
     padding-bottom: 50px;
     position: relative;
     width: 33.33333%;
     height: 100%;
   }
+
   &__stepper--footer {
     @extend .modal__footer;
   }
+
   &__bg1, &__bg2, &__bg3, &__bg4 {
     position: absolute;
     background: {
@@ -219,6 +251,7 @@
     };
     z-index: 0;
   }
+
   &__bg1 {
     display: block;
     left: -120px;
@@ -228,6 +261,7 @@
     background-image: url("../img/images/modal-art1.png");
     background-size: 150%;
   }
+
   &__bg2 {
     display: none;
     left: 50%;
@@ -238,6 +272,7 @@
     background-image: url("../img/images/modal-art2.png");
     background-size: 100%;
   }
+
   &__bg3 {
     display: none;
     right: -70px;
@@ -248,6 +283,7 @@
     background-image: url("../img/images/modal-art3.png");
     background-size: 100%;
   }
+
   &__bg4 {
     display: block;
     left: -100px;
@@ -258,6 +294,7 @@
     background-image: url("../img/images/modal-art4.png");
     background-size: 80%;
   }
+
   &__bg5 {
     position: absolute;
     top: 0;
@@ -274,6 +311,61 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .modal {
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    &__container {
+      padding: 0;
+    }
+
+    &__wrapper {
+      height: 100%;
+    }
+
+    &__bg1, &__bg2, &__bg3 {
+      display: none !important;
+    }
+    &__stepper--box {
+      height: calc(100% - 130px);
+    }
+    &__stepper {
+      height: 100%;
+    }
+  }
+  .write-modal, .ask-modal {
+    &__title {
+      font-size: $fontSizeLarger;
+    }
+    &__form {
+      height: 100%;
+    }
+    &__container {
+      height: 100%;
+      padding: $pdMed;
+      padding-top: $pdMed * 4;
+    }
+    &__close {
+      top: 15px;
+      right: 15px;
+      z-index: 2;
+      &:before, &:after {
+        background-color: $gr700;
+      }
+    }
+  }
+  .ask-modal {
+    &__container {
+      .modal__stepper--footer {
+        bottom: 15px;
+      }
+    }
+  }
+}
 @import "write-modal/write-modal";
 @import "ask-modal/ask-modal";
 @import "modal-404/modal-404";

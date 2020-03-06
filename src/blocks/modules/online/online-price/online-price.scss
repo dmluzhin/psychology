@@ -134,5 +134,12 @@
     &__card--divider {
       left: 30px;
     }
+    &__card {
+      padding-top: 0;
+    }
+    &__card--title {
+      font-size: $fontSizeBig;
+      padding-left: 40px;
+    }
   }
 }

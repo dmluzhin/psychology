@@ -92,7 +92,6 @@
   }
   &__tab--col-5 {
     @include col();
-    @include size(5);
     @include size-xl(5);
     @include size-lg(5);
     @include size-md(4);
@@ -101,7 +100,6 @@
   }
   &__tab--col-7 {
     @include col();
-    @include size(7);
     @include size-xl(7);
     @include size-lg(7);
     @include size-md(8);
@@ -166,10 +164,40 @@
 }
 @media screen and (max-width: 767px) {
   .about {
+    &__tabs--header {
+      height: 40px;
+      overflow: hidden;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        width: 6px;
+        height: 12px;
+        background-position: center center;
+        background-size: 6px 12px;
+        background-repeat: no-repeat;
+      }
+      &:before {
+        background-image: url("../img/svg/arrow-left.svg");
+        left: 15px;
+      }
+      &:after {
+        background-image: url("../img/svg/arrow-right.svg");
+        right: 15px;
+      }
+    }
     &__tabs--list {
+      position: relative;
       flex-wrap: nowrap;
-      overflow-x: auto;
       justify-content: flex-start;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin-bottom: -30px;
+      padding-bottom: 30px;
     }
     &__tabs--item {
       flex: 1 0 auto;
@@ -178,6 +206,12 @@
     &__tabs--link {
       max-width: 300px;
       margin: 0 auto;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: calc(100% - 45px);
+      }
     }
     &__tabs--content {
       padding-top: $pdLarge;

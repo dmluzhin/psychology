@@ -20,6 +20,9 @@
     flex-direction: row;
     justify-content: flex-start;
   }
+  &__tabs--btns {
+    flex-basis: 33.333%;
+  }
   &__tabs--group {
     flex-basis: 66%;
   }
@@ -208,19 +211,52 @@
     }
     &__card--item {
       padding-left: $pdMed;
-      padding-right: $pdMed;
+      padding-right: $pdMed + 10px;
+      padding-top: $pdReg * 2;
+      padding-bottom: $pdReg * 2;
+      height: 100px;
     }
     &__control {
       width: 100%;
       flex: 1 0 auto;
       box-shadow: none;
       margin-right: $pdMed;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 6px;
+        height: 12px;
+        background: {
+          size: 6px 12px;
+          repeat: no-repeat;
+          position: center;
+        }
+      }
+      &:before {
+        left: 16px;
+        background-image: url("../img/svg/arrow-white-left.svg");
+      }
+      &:after {
+        right: 16px;
+        background-image: url("../img/svg/arrow-white-right.svg");
+      }
+      &.active {
+        &:before {background-image: url("../img/svg/arrow-left.svg");}
+        &:after {background-image: url("../img/svg/arrow-right.svg");}
+      }
     }
     &__links, &__info {
       //display: none;
     }
     &__col {
       margin: 10px auto;
+    }
+    &__card--price {
+      font-size: 30px;
     }
   }
 }
