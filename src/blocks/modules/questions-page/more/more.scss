@@ -1,0 +1,73 @@
+.more {
+  padding-top: 0;
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+  &__card {
+    display: block;
+    @extend .card;
+    height: 100%;
+    text-decoration: none;
+    transition: $transitionShadow;
+    margin: 0 auto;
+    max-width: 370px;
+    &:hover {
+      box-shadow: $shadowDp4;
+    }
+  }
+  &__card--bg {
+    width: 100%;
+    height: 150px;
+    background: {
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    };
+    overflow: hidden;
+    margin-bottom: $pdBase;
+  }
+  &__card--content {
+    padding: $pdMed $pdMed + $pdReg;
+  }
+  &__card--title {
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  &__card--text {
+    font-weight: 300;
+    line-height: 1.5;
+    color: #B5B5B5;
+  }
+}
+@media screen and (max-width: 992px) {
+  .more {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .more {
+    &__col-4 {
+      margin-bottom: $pdLarge;
+    }
+    &__card--title, &__card--text {
+      font-size: $fontSizeReg;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 .hero-support {
   @extend .hero;
   &__container {
+    position: relative;
+    z-index: 1;
     @extend .container;
     height: 100%;
   }
@@ -9,7 +11,8 @@
   }
   &__col {
     @include col();
-    @include size-lg(8);
+    @include size-xl(7);
+    @include size-lg(7);
     @include size-md(9);
     @include size-sm(12);
     @include size-xs(12);
@@ -47,11 +50,16 @@
   .hero-support {
     padding: 60px 0;
     &__bg {
-      background-size: 40%;
+      background-size: 50%;
+      background-position: right -10px center;
     }
   }
 }
-
+@media screen and (max-width: 992px) {
+  .hero-support__container {
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   .hero-support {
     padding: $pdMed 0;

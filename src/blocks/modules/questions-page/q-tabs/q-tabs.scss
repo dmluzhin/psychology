@@ -1,0 +1,46 @@
+.q-tabs {
+  .q-tab {
+    @extend .about__tab;
+  }
+  &__container {
+    @extend .container;
+  }
+  &__title {
+    @extend .title;
+  }
+  &__row {
+    @include row-flex();
+    @include md(justify-content, center);
+    &:first-child {
+      margin-top: $pdBig;
+    }
+  }
+  &__col-4 {
+    @include col();
+    @include size-xl(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(6);
+    @include size-xs(12);
+    margin-bottom: $pdLarge;
+  }
+  &__card {
+    @extend .more__card;
+  }
+  &__card--bg {
+    @extend .more__card--bg;
+  }
+  &__card--content {
+    @extend .more__card--content;
+  }
+  &__card--title {
+    @extend .more__card--title;
+  }
+  &__card--text {
+    @extend .more__card--text;
+  }
+}
+
+.about__tabs--link.active {
+  color: $primary !important;
+}

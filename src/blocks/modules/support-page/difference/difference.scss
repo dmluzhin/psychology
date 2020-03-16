@@ -130,5 +130,69 @@
     &__text {
       margin-bottom: $pdLarge;
     }
+    &__col-6 {
+      margin-bottom: $pdLarge;
+      position: relative;
+      &:first-child .difference__card--image:before {
+        content: '1';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border: 3px solid $primary;
+        text-align: center;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -15px;
+        color: $black;
+        font-size: $fontSizeReg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:last-child .difference__card--image:before{
+        content: '2';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border: 3px solid $primary;
+        text-align: center;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -15px;
+        color: $black;
+        font-size: $fontSizeReg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:last-child .difference__card--image:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -45px;
+        margin: auto;
+        width: 17px;
+        height: 54px;
+        background: {
+          image: url("../img/svg/tail.svg");
+          size: 17px 54px;
+          position: center center;
+          repeat: no-repeat;
+        };
+      }
+      &:last-child {
+        margin-bottom: 60px;
+      }
+    }
+    &__divider {
+      display: none;
+    }
   }
 }
