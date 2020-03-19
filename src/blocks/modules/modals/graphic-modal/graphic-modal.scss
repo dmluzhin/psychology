@@ -37,24 +37,24 @@
       height: 100%;
     }
     &__graph--line1 {
-      width: 141px;
+      width: 167px;
       &:after {
         display: none;
       }
     }
     &__graph--line2 {
-      width: 275px;
-      left: 108px;
-      bottom: 88px;
+      width: 295px;
+      left: 139px;
+      bottom: 104px;
       transform: rotate(-22deg) translateX(15px) translateY(-42px);
       &:after {
         display: none;
       }
     }
     &__graph--line3 {
-      width: 266px;
-      left: 359px;
-      bottom: 169px;
+      width: 273px;
+      left: 415px;
+      bottom: 192px;
       transform: rotate(-13deg) translateX(15px) translateY(-42px);
       &:after {
         display: none;
@@ -62,9 +62,9 @@
     }
     &__graph--line4 {
       @extend .consult-count__graph--line;
-      width: 360px;
-      left: 615px;
-      bottom: 241px;
+      width: 290px;
+      left: 683px;
+      bottom: 257px;
       transform: rotate(-13deg) translateX(15px) translateY(-42px);
       &:before {
         left: -7px;
@@ -83,16 +83,21 @@
       }
     }
     &__card--block {
-      width: 230px;
+      width: 217px;
       padding-left: 20px;
-      padding-right: 20px;
+      padding-right: 5px;
+      .text__teal {
+        font-size: 15px;
+        line-height: 21.7px;
+      }
     }
     &__card--card.consult-count__card--card1 {
-      bottom: 30px;
+      bottom: 23px;
+      left: -90px;
       .consult-count__card--bg {
         background-image: url("../img/images/graph1.png");
         background-size: 214px 222px;
-        background-position: right 80px top 80px
+        background-position: right 100px top 100px
       }
     }
     &__card--card.consult-count__card--card2 {
@@ -101,38 +106,172 @@
       .consult-count__card--bg {
         background-image: url("../img/images/graph2.png");
         background-size: 181px 239px;
-        background-position: right 95px top 65px;
+        background-position: right 115px top 70px
       }
     }
     &__card--card.consult-count__card--card3 {
-      left: 470px;
+      left: 450px;
       bottom: 235px;
       .consult-count__card--bg {
         background-image: url("../img/images/graph3.png");
         background-size: 170px 249px;
-        background-position: right 90px top 90px;
+        background-position: right 93px top 100px
       }
     }
     &__card--card.consult-count__card--card4 {
-      left: 750px;
-      bottom: 295px;
+      left: 753px;
+      bottom: 305px;
       .consult-count__card--bg {
         background-image: url("../img/images/graph4.png");
         background-size: 210px 252px;
-        background-position: right 35px top 10px;
+        background-position: right 45px top 33px;
       }
     }
     &__me {
       position: absolute;
-      left: 0;
+      left: 60px;
       right: 0;
       margin: auto;
-      bottom: 20px;
+      bottom: 90px;
       width: 170px;
       height: 92px;
       background-image: url("../img/images/graph5.png");
       background-size: 100%;
       background-repeat: no-repeat;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .graphic-modal {
+    .consult-count {
+      &__card--card {
+        max-width: 360px;
+        height: 400px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .graphic-modal {
+    &.modal__wrapper {
+      height: 100%;
+    }
+    &__form {
+      height: 100%;
+    }
+    &__container {
+      height: 100%;
+      padding: 0;
+    }
+    &__chart--cards {
+
+    }
+    .consult-count {
+      &__chart--wrapper {
+        height: 100%;
+      }
+      &__chart--container {
+        padding: 0;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        margin: 0 auto;
+        height: 100%;
+      }
+      &__chart--x, &__chart--y, &__me,
+      &__graph--line1, &__graph--line2,
+      &__graph--line3, &__graph--line4{
+        display: none;
+      }
+      &__graph {
+        @include row-flex();
+        @include md(justify-content, center);
+        margin: 0;
+      }
+      &__card--card.consult-count__card--card1,
+      &__card--card.consult-count__card--card2,
+      &__card--card.consult-count__card--card3,
+      &__card--card.consult-count__card--card4 {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        @include col();
+        @include size-md(6);
+        @include size-sm(6);
+        @include size-xs(12);
+        height: auto;
+        padding-top: 130px;
+      }
+      &__card--card.consult-count__card--card1 {
+        .consult-count__card--bg {
+          background-size: 200px;
+          background-position: center center;
+        }
+      }
+      &__card--card.consult-count__card--card2 {
+        .consult-count__card--bg {
+          background-size: 200px;
+          background-position: center center;
+        }
+      }
+      &__card--card.consult-count__card--card3 {
+        .consult-count__card--bg {
+          background-size: 200px;
+          background-position: center center;
+        }
+      }
+      &__card--card.consult-count__card--card4 {
+        .consult-count__card--bg {
+          background-size: 200px;
+          background-position: center center;
+        }
+      }
+      &__card--block {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .graphic-modal {
+    .consult-count {
+      &__chart--container {
+        overflow-y: auto;
+      }
+      &__card--card.consult-count__card--card1,
+      &__card--card.consult-count__card--card2,
+      &__card--card.consult-count__card--card3,
+      &__card--card.consult-count__card--card4 {
+        &:after {
+          display: none;
+        }
+      }
+      &__card--card.consult-count__card--card1 {
+        .consult-count__card--bg {
+          background-size: 100px;
+          background-position: center top 40px;
+        }
+      }
+      &__card--card.consult-count__card--card2 {
+        .consult-count__card--bg {
+          background-size: 100px;
+          background-position: center top 40px;
+        }
+      }
+      &__card--card.consult-count__card--card3 {
+        .consult-count__card--bg {
+          background-size: 100px;
+          background-position: center top 40px;
+        }
+      }
+      &__card--card.consult-count__card--card4 {
+        .consult-count__card--bg {
+          background-size: 100px;
+          background-position: center top 40px;
+        }
+      }
     }
   }
 }

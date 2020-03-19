@@ -11,9 +11,10 @@
   }
   &__col {
     @include col();
+    @include size-xl(6);
     @include size-lg(6);
-    @include size-md(9);
-    @include size-sm(12);
+    @include size-md(7);
+    @include size-sm(7);
     @include size-xs(12);
   }
   &__bg {
@@ -46,21 +47,51 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .online-hero {
     padding: 60px 0;
     &__bg {
-      background-size: 40%;
+      max-width: 60%;
+      background-size: contain;
+      background-position: right -20px center;
+      margin: 0;
+      left: auto;
+      right: 0;
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .online-hero {
+    &__container {
+      max-width: 100%;
+    }
+    &__bg {
+      background-size: 622px 416px;
+      background-position: left 50px center;
+    }
+    &__paragraph {
+      font-size: $fontSizeReg;
+    }
+    &__title {
+      font-size: $fontSizeLarger;
+      br {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .online-hero {
 
-@media screen and (max-width: 600px) {
+  }
+}
+@media screen and (max-width: 574px) {
   .online-hero {
     padding: $pdMed 0;
     &__bg {
       position: static;
       width: 100%;
+      max-width: 100%;
       height: 360px;
       background-position: center center;
       background-size: contain;

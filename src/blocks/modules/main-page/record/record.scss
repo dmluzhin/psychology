@@ -36,15 +36,23 @@
     line-height: 1.6;
   }
 }
-
+@media screen and (max-width: 992px) {
+  .record {
+    &__btn--col {
+      .btn {
+        margin-right: $pdMed !important;
+      }
+    }
+  }
+}
 @media screen and (max-width: 600px) {
   .record {
     &__btn--col {
       flex-direction: column;
       align-items: center;
       .btn {
-        //margin: 0 auto;
-        margin-bottom: $pdReg;
+        margin: 0 auto !important;
+        margin-bottom: $pdReg !important;
         padding-left: $pdLarge;
         padding-right: $pdLarge;
         &:first-child {
