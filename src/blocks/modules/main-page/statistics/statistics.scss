@@ -2,6 +2,9 @@
   &__container {
     @extend .container;
   }
+  &__title {
+    @extend .title;
+  }
   &__row {
     @include row-flex();
   }

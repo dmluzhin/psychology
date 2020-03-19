@@ -29,7 +29,13 @@ $(document).ready(function () {
 		$('body').addClass('overflow');
 	});
 
-	$('.write-modal__close, .ask-modal__close, .modal-404__close').on('click', function () {
+	$('#modal__graphic').on('click', function () {
+		console.log('dsa');
+		$('.modal__graphic').addClass('active');
+		$('body').addClass('overflow');
+	});
+
+	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close').on('click', function () {
 		backToStart();
 	});
 
@@ -57,4 +63,24 @@ $(document).ready(function () {
 	$('.btn__test').on('click',function () {
 		$('.modal__404').addClass('active');
 	});
+});
+
+// Scroll to specific values
+// scrollTo is the same
+window.scroll({
+	top: 2500,
+	left: 0,
+	behavior: 'smooth'
+});
+
+// Scroll certain amounts from current position
+window.scrollBy({
+	top: 100, // could be negative value
+	left: 0,
+	behavior: 'smooth'
+});
+
+// Scroll to a certain element
+document.querySelector('.hello').scrollIntoView({
+	behavior: 'smooth'
 });

@@ -165,6 +165,14 @@
         .write-modal__progress--text {
           color: $primary;
         }
+        .modal__progress--sign {
+          .modal__progress--icon svg {
+            fill: $primary;
+          }
+          .modal__progress--text {
+            color: $primary;
+          }
+        }
       }
     }
 
@@ -309,6 +317,18 @@
       image: url("../img/images/modal-art5.png");
     };
   }
+  &__graphic {
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center bottom;
+      image: url("../img/images/bg7.png");
+    };
+    .modal__container {
+      max-width: 1060px;
+      padding: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -369,3 +389,4 @@
 @import "write-modal/write-modal";
 @import "ask-modal/ask-modal";
 @import "modal-404/modal-404";
+@import "graphic-modal/graphic-modal";
