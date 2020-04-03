@@ -40,7 +40,20 @@
     @extend .more__card--text;
   }
 }
-
+@media screen and (max-width: 992px) {
+  .q-tabs {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .q-tabs {
+    &__card--text {
+      font-size: $fontSizeReg;
+    }
+  }
+}
 .about__tabs--link.active {
   color: $primary !important;
 }
