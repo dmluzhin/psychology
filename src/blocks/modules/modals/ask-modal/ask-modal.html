@@ -1,5 +1,5 @@
 <div class="modal__wrapper ask-modal">
-	<form class="ask-modal__form">
+	<form class="ask-modal__form" id="askform">
 		<div class="ask-modal__container">
 			<div class="ask-modal__title">Задать вопрос Андрею Гунявину</div>
 			<div class="modal__progress">
@@ -26,7 +26,7 @@
 					<div class="modal__step modal__step-first">
 						<div class="ask-modal__form">
 							<div class="ask-modal__form--control">
-								<textarea class="ask-modal__form--textarea" placeholder="Сообщение..."></textarea>
+								<textarea class="ask-modal__form--textarea required" id="askMessage" placeholder="Сообщение..." maxlength="255" type="text" name="text" required></textarea>
 							</div>
 						</div>
 						<div class="modal__stepper--footer">
@@ -37,17 +37,20 @@
 					<div class="modal__step modal__step--second">
 						<div class="ask-modal__form">
 							<div class="ask-modal__form--control">
-								<input class="ask-modal__form--input" placeholder="Ваши имя и фамилия?">
+								<input class="ask-modal__form--input required" placeholder="Ваши имя и фамилия?" type="text" name="name" required>
 							</div>
 							<div class="ask-modal__form--control">
-								<input class="ask-modal__form--input" placeholder="Ваш телефон?">
+								<input class="ask-modal__form--input required" placeholder="Ваш телефон?" type="tel" name="phone" required>
 							</div>
 							<div class="ask-modal__form--control">
-								<input class="ask-modal__form--input" placeholder="Ваш email?">
+								<input class="ask-modal__form--input required" placeholder="Ваш email?" type="email" name="email" required>
 							</div>
 						</div>
 						<div class="modal__stepper--footer">
-							<div class="ask-modal__btn--next step-send" id="ask-send">Отправить</div>
+							<div class="ask-modal__btn--next">
+								<input type="submit" class="step-send" id="ask-send" value="" required>
+								Отправить
+							</div>
 						</div>
 					</div>
 					<div class="modal__step modal__step--final">

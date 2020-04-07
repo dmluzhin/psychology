@@ -1,5 +1,5 @@
 <div class="modal__wrapper write-modal">
-	<form class="write-modal__form">
+	<form class="write-modal__form" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="writeform">
 		<div class="write-modal__container">
 			<div class="write-modal__title">Сообщение Андрею Гунявину</div>
 			<div class="modal__progress">
@@ -26,7 +26,7 @@
 					<div class="modal__step modal__step-first">
 						<div class="write-modal__form">
 							<div class="write-modal__form--control">
-								<textarea class="write-modal__form--textarea" placeholder="Сообщение..."></textarea>
+								<textarea class="write-modal__form--textarea required" name="writeMessage" id="writeMessage" type="text" placeholder="Сообщение..." required></textarea>
 							</div>
 						</div>
 						<div class="modal__stepper--footer">
@@ -37,17 +37,20 @@
 					<div class="modal__step modal__step--second">
 						<div class="write-modal__form">
 							<div class="write-modal__form--control">
-								<input class="write-modal__form--input" placeholder="Ваши имя и фамилия?">
+								<input class="write-modal__form--input checker required" placeholder="Ваши имя и фамилия?" type="text" name="name" id="writeName" minlength="2" required>
 							</div>
 							<div class="write-modal__form--control">
-								<input class="write-modal__form--input" placeholder="Ваш телефон?">
+								<input class="write-modal__form--input required" placeholder="Ваш телефон?" type="tel" name="phone" required>
 							</div>
 							<div class="write-modal__form--control">
-								<input class="write-modal__form--input" placeholder="Ваш email?">
+								<input class="write-modal__form--input checker required" placeholder="Ваш email?" type="email" name="email" id="writeEmail" required>
 							</div>
 						</div>
 						<div class="modal__stepper--footer">
-							<div class="write-modal__btn--next step-send" id="step-send">Отправить</div>
+							<div class="write-modal__btn--next sender">
+								Отправить
+								<input class="step-send" id="step-send" type="submit" value="Отправить">
+							</div>
 						</div>
 					</div>
 					<div class="modal__step modal__step--final">

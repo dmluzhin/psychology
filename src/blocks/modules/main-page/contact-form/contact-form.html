@@ -3,40 +3,41 @@
 		<div class="contact-form__row">
 			<div class="contact-form__left-col">
 				<div class="contact-form__form">
-					<form class="form">
+					<form class="form" id="contactform">
 						<div class="form__control">
 							<div class="form__icon">
 								<svg class="icon"><use xlink:href="#fa-user"></use></svg>
 							</div>
-							<input class="form__input" placeholder="Как я могу к Вам обращаться?" type="text">
+							<input class="form__input required" placeholder="Как я могу к Вам обращаться?" type="text" name="name" id="contactFio" required>
 						</div>
 						<div class="form__control">
 							<div class="form__icon">
 								<svg class="icon"><use xlink:href="#fa-phone"></use></svg>
 							</div>
-							<input class="form__input" placeholder="+7(XXX) XXX-XX-XX" type="tel">
+							<input class="form__input required" placeholder="+7(XXX) XXX-XX-XX" type="tel" name="phone" id="contactPhone" required>
 						</div>
 						<div class="form__control">
 							<div class="form__icon">
 								<svg class="icon"><use xlink:href="#fa-envelope"></use></svg>
 							</div>
-							<input class="form__input" placeholder="Ваш e-mail" type="email">
+							<input class="form__input required" placeholder="Ваш e-mail" type="email" name="email" id="contactEmail" required>
 						</div>
 						<div class="form__control">
 							<div class="form__icon">
 								<svg class="icon"><use xlink:href="#fa-pencil-alt"></use></svg>
 							</div>
-							<textarea class="form__textarea" placeholder="Вашe сообщение" type="email"></textarea>
+							<textarea class="form__textarea" placeholder="Вашe сообщение" type="email" maxlength="255" name="text"></textarea>
 						</div>
 						<div class="form__submit">
-							<button class="btn btn__primary" type="submit">Отправить</button>
+							<input class="btn btn__primary form__submit--btn" type="submit" id="contactSubmit" value="Отправить">
 						</div>
 					</form>
 				</div>
 			</div>
 			<div class="contact-form__right-col">
 				<div class="contact-form__video text__right">
-					<img src="img/images/video.png"/>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/G5mG7ONiQJ8?embed/videoid?modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 				</div>
 			</div>
 		</div>

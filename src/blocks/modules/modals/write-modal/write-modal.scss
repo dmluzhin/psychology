@@ -131,11 +131,28 @@
         position: center center;
         repeat: no-repeat;
       };
-      opacity: .25;
+      opacity: .35;
       transition: $transitionEase;
     }
     &:hover:after {
       opacity: 1;
+    }
+    input {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
+    &.step-message {
+      pointer-events: none;
+      opacity: .25;
+      &.active {
+        pointer-events: auto;
+        opacity: 1;
+      }
     }
   }
   &__success {

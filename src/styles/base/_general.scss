@@ -137,3 +137,10 @@ ul.list {
     }
   }
 }
+label.error {
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  color: red;
+  font-size: 12px;
+}
