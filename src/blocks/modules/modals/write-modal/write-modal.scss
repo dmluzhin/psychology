@@ -1,191 +1,97 @@
-.write-modal {
+.test-modal {
   &__container {
     @extend .modal__box;
-    overflow: hidden;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 45px 70px;
+    height: 480px;
+    position: relative;
   }
   &__title {
-    @extend .modal__title;
-  }
-  &__progress {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 45px;
     width: 100%;
-    height: 75px;
-    padding-top: 12px;
-    position: relative;
+    max-width: 400px;
+  }
+  &__steps--stepper {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    &--step {
-      position: relative;
-      flex: 1 1 auto;
-      flex-basis: 50%;
-      height: 3px;
-      background-color: #C2C2C2;
-      &:before {
-        content: '';
-        position: absolute;
-        left: -1px;
-        top: -12px;
-        background-color: $white;
-        border: 3px solid #C2C2C2;
-        width: 20px;
-        height: 20px;
-        font-size: $fontSizeBase;
-        font-weight: 600;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 1.4;
-      }
-      &:first-child {
-        &:before {
-          content: '1';
-          border-color: $primary;
-        }
-        .write-modal__progress--icon .icon {
-          fill: $primary;
-        }
-        .write-modal__progress--text {
-          color: $primary;
-        }
-      }
-      &:nth-child(2):before {
-        content: '2';
-      }
-      &:nth-child(3):before {
-        content: '3';
-      }
-      &:nth-child(4):before {
-        content: '3';
-      }
-      &:nth-child(5):before {
-        content: '4';
-      }
-      &.active {
-        background-color: $primary;
-        &:before {
-          border-color: $primary;
-        }
-        .write-modal__progress--icon .icon {
-          fill: $primary;
-        }
-        .write-modal__progress--text {
-          color: $primary;
-        }
-      }
-    }
-    &--finish {
-      position: absolute;
-      right: -1px;
-      top: 0;
-      background-color: $white;
-      border: 3px solid #C2C2C2;
-      width: 26px;
-      height: 26px;
-      font-size: $fontSizeBase;
-      font-weight: 600;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 1.4;
-      background:  {
-        image: url("../img/svg/check-gray.svg");
-        size: 12px;
-        position: center center;
-        repeat: no-repeat;
-      };
-      &.active {
-        border-color: $primary;
-        background-image: url("../img/svg/check.svg");
-      }
-    }
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 106px;
   }
-  &__close {
-    @extend .modal__close;
-  }
-  &__btn {
-    @extend .btn;
-    @extend .btn__primary;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  .step {
     position: relative;
-    box-shadow: none !important;
-  }
-  &__btn--next {
-    @extend .btn;
-    @extend .btn__primary;
-    padding-left: 20px !important;
-    padding-right: 40px !important;
-    position: relative;
-    box-shadow: none !important;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(62, 151, 209, 0.2);
+    color: rgba(62, 151, 209, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
     &:after {
-      content: '';
+      content: "";
       position: absolute;
-      width: 7px;
-      height: 14px;
-      right: 20px;
+      width: 70px;
+      height: 2px;
+      background-color: rgba(62, 151, 209, 0.2);
+      left: 28px;
       top: 0;
       bottom: 0;
       margin: auto;
-      background: {
-        image: url("../img/svg/chevron.svg");
-        size: 7px 14px;
-        position: center center;
-        repeat: no-repeat;
-      };
-      opacity: .35;
-      transition: $transitionEase;
     }
-    &:hover:after {
-      opacity: 1;
-    }
-    input {
-      opacity: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      cursor: pointer;
-    }
-    &.step-message {
-      pointer-events: none;
-      opacity: .25;
-      &.active {
-        pointer-events: auto;
-        opacity: 1;
-      }
+    &.current {
+      color: rgba(62, 151, 209, 1);
     }
   }
-  &__success {
+  &__row {
     display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 270px;
-    text-align: center;
+    max-width: 400px;
+  }
+  &__col {
+    width: 50%;
+    &:first-child {
+      padding-right: 74px;
+    }
+  }
+  &__footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+  }
+  &__next {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  &__next--btn {
+    width: 136px;
+    height: 48px;
+    display: flex;
+    border: 1px solid #eeeeee;
+    border-radius: 24px;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    font-size: $fontSizeLarge;
-  }
-  &__form {}
-  &__form--control {
-    @extend .form__control;
-    padding-left: 0 !important;
-    border-width: 0 !important;
-  }
-  &__form--input {
-    @extend .form__input;
-    padding-left: 0 !important;
-    text-align: center;
-    border-bottom: 3px solid lighten($borderGray, 10%) !important;
-    &:focus {
-      border-color: $primary !important;
+    cursor: pointer;
+    &:hover {
+      border-color: $primary;
+      color: $primary
     }
   }
-  &__form--textarea {
-    @extend .form__textarea;
-    height: 250px;
-    border-bottom: 3px solid lighten($borderGray, 10%) !important;
-    &:focus {
-      border-color: $primary !important;
-    }
+  &__back {
+    display: flex;
+    flex: 0 0 auto;
   }
 }
