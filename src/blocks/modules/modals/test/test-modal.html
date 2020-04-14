@@ -1,41 +1,36 @@
 <div class="modal__wrapper test-modal">
 	<form class="test__form" id="testform">
 		<div class="test-modal__container">
-			<form class="test-modal__steps">
+			<div class="test-modal__steps" id="">
 				<div class="test-modal__steps--container">
 					<div class="test-modal__steps--stepper">
-						<div class="step current">1</div>
-						<div class="step">2</div>
-						<div class="step">3</div>
-						<div class="step">4</div>
-						<div class="step">5</div>
-						<div class="step">6</div>
-						<div class="step">7</div>
+						<div class="current" data-toggle="tab">
+							<a data-toggle="tab" role="tab">1</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">2</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">3</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">4</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">5</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">6</a></div>
+						<div class="disabled" data-toggle="tab">
+							<a data-toggle="tab" role="tab">7</a></div>
 					</div>
 				</div>
 				<div class="test-modal__stepper">
 					<div class="test-modal__content">
-						<div class="test-modal__title">Возникают ли у Вас сильные эмоциональные реакции в ответ на поведение или слова другого человека?</div>
-						<div class="test-modal__optiions">
+						<div class="stepbg1"></div>
+						<!--<div class="test-modal__title">Возникают ли у Вас сильные эмоциональные реакции в ответ на поведение или слова другого человека?</div>-->
+						<div class="test-modal__options">
 							<div class="test-modal__row">
-								<div class="test-modal__col">
-									<div class="test-modal__control">
-										<input type="radio" class="test-modal__radio" required>
-										<label>Да, часто</label>
-									</div>
-									<div class="test-modal__control">
-										<input type="radio" class="test-modal__radio" required>
-										<label>Да, иногда</label>
-									</div>
-								</div>
-								<div class="test-modal__col">
-									<div class="test-modal__control">
-										<input type="radio" class="test-modal__radio" required>
-										<label>Очень редко</label>
-									</div>
-									<div class="test-modal__control">
-										<input type="radio" class="test-modal__radio" required>
-										<label>Нет, никогда</label>
+								<div id="quiz">
+									<h1 id="quiz-name" style="display: none"></h1>
+									<div id="quiz-results">
+										<p id="quiz-results-message"></p>
+										<p id="quiz-results-score"></p>
 									</div>
 								</div>
 							</div>
@@ -43,13 +38,18 @@
 					</div>
 				</div>
 				<div class="test-modal__footer">
-					<div class="test-modal__back"><</div>
+					<button type="button" class="test-modal__back" id="prev-question-button"></button>
 					<div class="test-modal__next">
-						<div class="test-modal__next--btn">далее</div>
-						<div class="test-modal__next--counter">1/7</div>
+						<button type="button" class="test-modal__next--btn" id="next-question-button">Далее</button>
+						<button type="button" class="test-modal__next--btn" id="submit-button">Далее</button>
+						<div class="test-modal__next--counter">
+							<span id="counter">1</span>
+							<span class="slash"></span>
+							<span>7</span>
+						</div>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 		<div class="test-modal__close"></div>
 	</form>
