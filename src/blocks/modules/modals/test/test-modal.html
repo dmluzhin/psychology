@@ -1,37 +1,60 @@
 <div class="modal__wrapper test-modal">
 	<form class="test__form" id="testform">
-		<div class="test-modal__container">
-			<div class="test-modal__steps" id="">
+		<div class="test-modal__container" id="quiz">
+			<div class="test-modal__steps">
 				<div class="test-modal__steps--container">
-					<div class="test-modal__steps--stepper">
-						<div class="current" data-toggle="tab">
-							<a data-toggle="tab" role="tab">1</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">2</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">3</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">4</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">5</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">6</a></div>
-						<div class="disabled" data-toggle="tab">
-							<a data-toggle="tab" role="tab">7</a></div>
-					</div>
+					<ul class="test-modal__steps--stepper">
+						<li class="done">
+							<a role="tab">
+								<span class="step">1</span>
+							</a></li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">2</span>
+							</a>
+						</li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">3</span>
+							</a>
+						</li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">4</span>
+							</a>
+						</li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">5</span>
+							</a>
+						</li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">6</span>
+							</a>
+						</li>
+						<li class="disabled">
+							<a role="tab">
+								<span class="step">7</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div class="test-modal__stepper">
 					<div class="test-modal__content">
-						<div class="stepbg1"></div>
-						<!--<div class="test-modal__title">Возникают ли у Вас сильные эмоциональные реакции в ответ на поведение или слова другого человека?</div>-->
+						<ul class="bg-stepper">
+							<li><span class="stepbg1"></span></li>
+							<li><span class="stepbg2"></span></li>
+							<li><span class="stepbg3"></span></li>
+							<li><span class="stepbg4"></span></li>
+							<li><span class="stepbg5"></span></li>
+							<li><span class="stepbg6"></span></li>
+							<li><span class="stepbg7"></span></li>
+						</ul>
 						<div class="test-modal__options">
 							<div class="test-modal__row">
-								<div id="quiz">
+								<div id="">
 									<h1 id="quiz-name" style="display: none"></h1>
-									<div id="quiz-results">
-										<p id="quiz-results-message"></p>
-										<p id="quiz-results-score"></p>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -43,12 +66,28 @@
 						<button type="button" class="test-modal__next--btn" id="next-question-button">Далее</button>
 						<button type="button" class="test-modal__next--btn" id="submit-button">Далее</button>
 						<div class="test-modal__next--counter">
-							<span id="counter">1</span>
+							<ul>
+								<li><span class="counter">1</span></li>
+								<li><span class="counter">2</span></li>
+								<li><span class="counter">3</span></li>
+								<li><span class="counter">4</span></li>
+								<li><span class="counter">5</span></li>
+								<li><span class="counter">6</span></li>
+								<li><span class="counter">7</span></li>
+							</ul>
 							<span class="slash"></span>
 							<span>7</span>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="test-modal__results" id="quiz-results">
+				<div class="test-modal__results--content">
+					<h3 class="test-modal__results--title">Ваш результат</h3>
+					<p id="quiz-results-message"></p>
+					<p id="quiz-results-submessage"></p>
+				</div>
+				<button type="button" style="display: block">Пройти тест заново</button>
 			</div>
 		</div>
 		<div class="test-modal__close"></div>

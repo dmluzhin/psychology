@@ -26,6 +26,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 106px;
+    li {
+      list-style: none;
+    }
+    li.done .step,
+    li.active .step {
+      color: $primary;
+    }
   }
   .step {
     position: relative;
@@ -239,6 +246,17 @@
     color: $black;
     margin-top: 8px;
     margin-left: 30px;
+    li {
+      list-style: none;
+      .counter {
+        display: none;
+      }
+      &.active {
+        .counter {
+          display: block;
+        }
+      }
+    }
     span.slash {
       background-color: $primary;
       position: absolute;
@@ -260,6 +278,34 @@
       position: absolute;
       right: -6px;
       bottom: -2px;
+    }
+  }
+  .bg-stepper {
+    li {
+      list-style: none;
+      span {
+        display: none;
+      }
+      &.active span{
+        display: block;
+      }
+    }
+  }
+  &__results {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $white;
+    z-index: 1;
+    padding: 45px 70px;
+    button {
+      display: block !important;
+    }
+    &--content {
+      width: 100%;
+      max-width: 330px;
     }
   }
 }

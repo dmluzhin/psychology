@@ -357,16 +357,22 @@ $(document).ready(function () {
 			var percentage = score / self.questions.length;
 			console.log(percentage);
 			var message;
+			var title;
+			var subtitle;
 			if (percentage === 1) {
 				message = 'Great job!'
 			} else if (percentage >= .75) {
 				message = 'You did alright.'
 			} else if (percentage >= .5) {
-				message = 'Better luck next time.'
+				title = 'Вероятным направлением работы с психологом могло бы стать:';
+				subtitle = 'исследование механизмов защиты в отношениях с другими людьми.';
+				message = 'Отношениях бессознательно воспринимаемые как неприятные \n' +
+						'или имеющие связь с болезненным, травмирующим предшествующим опытом.'
 			} else {
 				message = 'Maybe you should try a little harder.'
 			}
-			$('#quiz-results-message').text(message);
+			$('#quiz-results-message').html(' <strong>' + title + '</strong>');
+			$('#quiz-results-submessage').html(' <p class="paragraph">' + subtitle + '</p>' + '<p>' + message + '</p>');
 			$('#quiz-results-score').html('You got <b>' + score + '/' + self.questions.length + '</b> questions correct.');
 			$('#quiz-results').slideDown();
 			$('#quiz button').slideUp();
@@ -493,7 +499,51 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.test-modal__next--btn').click(function (e) {
+	function setClasses(index, steps) {
+		if (index < 0 || index > steps) return;
+		$(".test-modal__steps--container ul li").each(function() {
+			$(this).removeClass();
+		});
+		$(".test-modal__next--counter ul li").each(function() {
+			$(this).removeClass();
+		});
+		$(".test-modal__content ul li").each(function() {
+			$(this).removeClass();
+		});
+		$(".test-modal__steps--container ul li:lt(" + index + ")").each(function() {
+			$(this).addClass("done");
+		});
+		$(".test-modal__next--counter ul li:lt(" + index + ")").each(function() {
+			$(this).addClass("done");
+		});
+		$(".test-modal__content ul li:lt(" + index + ")").each(function() {
+			$(this).addClass("done");
+		});
+		$(".test-modal__steps--container ul li:eq(" + index + ")").addClass("active");
+		$(".test-modal__next--counter ul li:eq(" + index + ")").addClass("active");
+		$(".test-modal__content ul li:eq(" + index + ")").addClass("active");
+		var p = index * (100 / steps);
+		$("#prog").width(p + '%');
+	}
+	$(".test-modal__back").click(function(){
+		var step = $(".test-modal__steps--container ul li.active span.step")[0].innerText;
+		var steps = $(".test-modal__steps--container ul li").length;
+		setClasses(step - 2, steps - 1);
+	});
+	$(".test-modal__next--btn").click(function() {
+		if ($(this).text() == 'done') {
+			alert("submit the form?!?")
+		} else {
+			var step = $(".test-modal__steps--container ul li.active span.step, .test-modal__next--counter ul li.active span.counter, .test-modal__content ul li.active span.counter")[0].innerText;
+			var steps = $(".test-modal__steps--container ul li, .test-modal__next--counter ul li, .test-modal__content ul li").length;
+			setClasses(step, steps - 1);
+		}
+	});
+
+	// initial state setup
+	setClasses(0, $(".test-modal__steps--container ul li").length);
+
+	/*$('.test-modal__next--btn').click(function (e) {
 		console.log('click!');
 		var $active = $('.test-modal__steps--stepper div.current');
 		$active.next().removeClass('disabled');
@@ -506,5 +556,5 @@ $(document).ready(function () {
 	}
 	function prevTab(elem) {
 		$(elem).prev().find('a[data-toggle="tab"]').click();
-	}
+	}*/
 });
