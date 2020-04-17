@@ -190,6 +190,22 @@
       visibility: hidden;
     }
   }
+  &__repeat--btn {
+    @extend .test-modal__back;
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+  &__btn--group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+  }
   &__content {
     .stepbg1, .stepbg2, .stepbg3, .stepbg4, .stepbg5, .stepbg6, .stepbg7 {
       @extend .stepbg;
@@ -306,6 +322,56 @@
     &--content {
       width: 100%;
       max-width: 330px;
+    }
+    &--title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(62, 151, 209, 0.2);
+      margin-bottom: 50px;
+      position: relative;
+      padding-left: 40px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        background-color: rgba(62, 151, 209, 0.2);
+        left: -70px;
+        top: 9px;
+      }
+      .circle {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 2px solid rgba(62, 151, 209, 0.2);
+        &:after {
+          content: '';
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $primary;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+    &--subtitle {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 20px;
     }
   }
 }

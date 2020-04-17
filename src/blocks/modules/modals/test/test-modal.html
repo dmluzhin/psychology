@@ -83,11 +83,17 @@
 			</div>
 			<div class="test-modal__results" id="quiz-results">
 				<div class="test-modal__results--content">
-					<h3 class="test-modal__results--title">Ваш результат</h3>
-					<p id="quiz-results-message"></p>
-					<p id="quiz-results-submessage"></p>
+					<h3 class="test-modal__results--title">
+						<span>Ваш результат</span>
+						<span class="circle"></span>
+					</h3>
+					<p id="quiz-results-message" class="test-modal__results--subtitle"></p>
+					<p id="quiz-results-submessage" class="paragraph"></p>
 				</div>
-				<button type="button" style="display: block">Пройти тест заново</button>
+				<div class="test-modal__btn--group">
+					<button type="button" style="display: block" class="test-modal__repeat--btn"></button>
+					<div class="test-modal__label">Пройти тест заново</div>
+				</div>
 			</div>
 		</div>
 		<div class="test-modal__close"></div>
