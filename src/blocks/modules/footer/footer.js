@@ -185,6 +185,7 @@ $(document).ready(function () {
 		}
 	});
 
+
 	$('#writeform').submit(function () {
 		$.ajax({
 			type: "POST",
@@ -338,11 +339,14 @@ $(document).ready(function () {
 			}
 		});
 
+		if ($())
+
 		// Add listener for the next question button
 		$('#next-question-button').on('click', function(){
 			if (current_question_index < self.questions.length - 1) {
 				current_question_index++;
 				change_question();
+				$(this).addClass('disabled');
 			}
 		});
 
@@ -383,6 +387,7 @@ $(document).ready(function () {
 			$('#quiz button').slideUp();
 		});
 
+
 		// Add a listener on the questions container to listen for user select changes. This is for determining whether we can submit answers or not.
 		question_container.bind('user-select-change', function() {
 			var all_questions_answered = true;
@@ -393,6 +398,16 @@ $(document).ready(function () {
 				}
 			}
 			$('#submit-button').prop('disabled', !all_questions_answered);
+
+			$('#start').on('click', function(){
+				$('#quiz-results').hide();
+				current_question_index = 0;
+				all_questions_answered = false;
+				$('#prev-question-button').show();
+				setClasses(0, $(".test-modal__steps--container ul li").length);
+				$('input').attr('checked', false);
+				change_question();
+			});
 		});
 	}
 
@@ -455,10 +470,14 @@ $(document).ready(function () {
 					.appendTo(container);
 
 			// Create the label
-			var choice_label = $('<label>')
+			var choice_label = $('<label class="test-modal__label-radio">')
 					.text(this.choices[i])
 					.attr('for', 'choices-' + i)
 					.appendTo(container);
+
+			choice_label.on('click', function () {
+				$('#next-question-button').removeClass('disabled');
+			})
 		}
 
 
