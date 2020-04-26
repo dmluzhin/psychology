@@ -31,12 +31,16 @@ $(document).ready(function () {
 	});
 
 	$('#modal__graphic').on('click', function () {
-		console.log('dsa');
 		$('.modal__graphic').addClass('active');
 		$('body').addClass('overflow');
 	});
 
-	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close').on('click', function () {
+	$('#modal__test').on('click', function () {
+		$('.modal__test').addClass('active');
+		$('body').addClass('overflow');
+	});
+
+	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close, .test-modal__close').on('click', function () {
 		backToStart();
 	});
 
@@ -81,9 +85,8 @@ $(document).ready(function () {
 	$('.step-success').on('click', function () {
 		backToStart();
 	});
+	$('.test-modal__repeat--btn').on('click', function () {
 
-	$('.btn__test').on('click', function () {
-		$('.modal__404').addClass('active');
 	});
 
 	$('#writeform').validate({
@@ -359,21 +362,23 @@ $(document).ready(function () {
 			var message;
 			var title;
 			var subtitle;
+			var img;
 			if (percentage === 1) {
-				message = 'Great job!'
-			} else if (percentage >= .75) {
-				message = 'You did alright.'
-			} else if (percentage >= .5) {
+				title = 'Показаний для работы с психологом нет.';
+				subtitle = '¯' + '&bsol;' + '_(ツ)_/¯';
+				message = '';
+				img = 'img/images/result2.png';
+			} else {
 				title = 'Вероятным направлением работы с психологом могло бы стать:';
 				subtitle = 'Исследование механизмов защиты в отношениях с другими людьми.';
 				message = 'Отношениях бессознательно воспринимаемые как неприятные \n' +
-						'или имеющие связь с болезненным, травмирующим предшествующим опытом.'
-			} else {
-				message = 'Maybe you should try a little harder.'
+						'или имеющие связь с болезненным, травмирующим предшествующим опытом.';
+				img = 'img/images/result1.png';
 			}
 			$('#quiz-results-message').html(' <strong>' + title + '</strong>');
 			$('#quiz-results-submessage').html(' <p class="paragraph">' + subtitle + '</p>' + '<p>' + message + '</p>');
 			$('#quiz-results-score').html('You got <b>' + score + '/' + self.questions.length + '</b> questions correct.');
+			$('#quiz-result-image').html(' <img src=" ' + img + '"/>');
 			$('#quiz-results').slideDown();
 			$('#quiz button').slideUp();
 		});

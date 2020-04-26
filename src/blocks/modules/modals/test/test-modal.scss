@@ -199,8 +199,12 @@
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    margin-left: 23px;
   }
   &__btn--group {
+    position: absolute;
+    left: 70px;
+    bottom: 30px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -316,6 +320,7 @@
     background: $white;
     z-index: 1;
     padding: 45px 70px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     button {
       display: block !important;
     }
@@ -373,5 +378,20 @@
       line-height: 20px;
       margin-bottom: 20px;
     }
+  }
+  &__result-image {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  &__close {
+    @extend .modal__close;
+    right: 70px;
   }
 }
