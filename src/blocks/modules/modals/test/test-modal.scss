@@ -401,3 +401,8 @@
     right: 70px;
   }
 }
+#submit-button {
+  &.disabled {
+    display: none !important;
+  }
+}

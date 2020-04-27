@@ -347,6 +347,10 @@ $(document).ready(function () {
 				current_question_index++;
 				change_question();
 				$(this).addClass('disabled');
+				console.log(current_question_index);
+			}
+			if(current_question_index >= 6) {
+				$('#submit-button').removeClass('disabled');
 			}
 		});
 
@@ -398,18 +402,16 @@ $(document).ready(function () {
 				}
 			}
 			$('#submit-button').prop('disabled', !all_questions_answered);
-
-			$('#start').on('click', function(){
-				$('#quiz-results').hide();
-				current_question_index = 0;
-				all_questions_answered = false;
-				$('#prev-question-button').show();
-				setClasses(0, $(".test-modal__steps--container ul li").length);
-				$('input').attr('checked', false);
-				change_question();
-			});
 		});
-	}
+		$('#start').on('click', function(){
+			$('#quiz-results').hide();
+			current_question_index = 0;
+			$('#prev-question-button').show();
+			$('#submit-button').show().addClass('disabled');
+			setClasses(0, $(".test-modal__steps--container ul li").length);
+			change_question();
+		});
+	};
 
 // An object for a Question, which contains the question, the correct choice, and wrong choices. This block is the constructor.
 	var Question = function(question_string, correct_choice, wrong_choices) {
@@ -492,7 +494,7 @@ $(document).ready(function () {
 			// Trigger a user-select-change
 			container.trigger('user-select-change');
 		});
-	}
+	};
 
 // "Main method" which will create all the objects and render the Quiz.
 	$(document).ready(function() {
