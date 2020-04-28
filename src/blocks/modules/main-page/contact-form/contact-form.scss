@@ -7,16 +7,16 @@
   }
   &__left-col {
     @include col();
-    @include size-xl(5);
-    @include size-lg(5);
+    @include size-xl(7);
+    @include size-lg(7);
     @include size-md(12);
     @include size-sm(12);
     @include size-xs(12);
   }
   &__right-col {
     @include col();
-    @include size-xl(7);
-    @include size-lg(7);
+    @include size-xl(5);
+    @include size-lg(5);
     @include size-md(12);
     @include size-sm(12);
     @include size-xs(12);
@@ -32,7 +32,7 @@
   }
 }
 .form {
-  padding-right: 100px;
+  padding-left: 100px;
   &__control {
     position: relative;
     width: 100%;

@@ -18,6 +18,7 @@ $(document).ready(function () {
 		$('.modal__bg2, .modal__bg3').hide();
 		$('.modal__bg1').show();
 		$('.modal__progress--sign').show();
+		$('.sign-success').removeClass('active');
 	}
 
 	$('#modal-contact').on('click', function () {
@@ -40,7 +41,12 @@ $(document).ready(function () {
 		$('body').addClass('overflow');
 	});
 
-	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close, .test-modal__close').on('click', function () {
+	$('.singup-modal__id').on('click', function () {
+		$('.singup-modal').addClass('active');
+		$('body').addClass('overflow');
+	});
+
+	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close, .test-modal__close, .singup-modal__close').on('click', function () {
 		backToStart();
 	});
 
@@ -129,6 +135,36 @@ $(document).ready(function () {
 			},
 			phone: {
 				required: true,
+				minlength: 11
+			},
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: {
+				required: "Пожалуйста, введите ФИО",
+				minlength: "ФИО должно быть не короче двух символов"
+			},
+			phone: {
+				required: "Пожалуйста, введите телефон",
+				minlength: "Телефон должен быть не короче 11 символов"
+			},
+			email: {
+				required: "Пожалуйста, введите email",
+				email: "Пожалуйста, введите корректный email"
+			}
+		}
+	});
+	$('#signform').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			phone: {
+				required: true,
 				minlength: 2
 			},
 			email: {
@@ -192,7 +228,7 @@ $(document).ready(function () {
 			url: "../php/mail.php",
 			data: $(this).serialize()
 		}).done(function () {
-			alert('success');
+			console.log('success');
 		});
 		return false;
 	});
@@ -202,7 +238,18 @@ $(document).ready(function () {
 			url: "../php/contact.php",
 			data: $(this).serialize()
 		}).done(function () {
-			alert('contactForm success');
+			console.log('contactForm success');
+		});
+		return false;
+	});
+	$('#signform').submit(function () {
+		$('.sign-success').addClass('active');
+		$.ajax({
+			type: "POST",
+			url: "../php/sign.php",
+			data: $(this).serialize()
+		}).done(function () {
+			console.log('contactForm success');
 		});
 		return false;
 	});
@@ -212,7 +259,7 @@ $(document).ready(function () {
 			url: "../php/ask.php",
 			data: $(this).serialize()
 		}).done(function () {
-			alert('askform success');
+			console.log('askform success');
 		});
 		return false;
 	});
@@ -225,8 +272,10 @@ $(document).ready(function () {
 
 		if (checkFio.length != 0 && checkPhone.length != 0 && checkEmail.length != 0) {
 			$("#contactSubmit").addClass('active');
+			$("#signSubmit").addClass('active');
 		} else {
 			$("#contactSubmit").removeClass('active');
+			$("#signSubmit").removeClass('active');
 		}
 		return false;
 	}
@@ -558,7 +607,7 @@ $(document).ready(function () {
 	});
 	$(".test-modal__next--btn").click(function() {
 		if ($(this).text() == 'done') {
-			alert("submit the form?!?")
+			console.log("submit the form?!?")
 		} else {
 			var step = $(".test-modal__steps--container ul li.active span.step, .test-modal__next--counter ul li.active span.counter, .test-modal__content ul li.active span.counter")[0].innerText;
 			var steps = $(".test-modal__steps--container ul li, .test-modal__next--counter ul li, .test-modal__content ul li").length;

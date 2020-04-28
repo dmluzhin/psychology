@@ -1,0 +1,41 @@
+<div class="modal__wrapper singup-modal">
+	<div class="singup-modal__container">
+		<div class="singup-modal__title">Записаться на прием</div>
+		<form class="singup-modal__form" id="signform">
+			<div class="form__control">
+				<div class="form__icon">
+					<svg class="icon">
+						<use xlink:href="#fa-user"></use>
+					</svg>
+				</div>
+				<input class="form__input required" placeholder="Как я могу к Вам обращаться?" type="text" name="name" id="contactFio" required>
+			</div>
+			<div class="form__control">
+				<div class="form__icon">
+					<svg class="icon">
+						<use xlink:href="#fa-phone"></use>
+					</svg>
+				</div>
+				<input class="form__input required" placeholder="+7(XXX) XXX-XX-XX" type="tel" name="phone" id="contactPhone" required>
+			</div>
+			<div class="form__control">
+				<div class="form__icon">
+					<svg class="icon">
+						<use xlink:href="#fa-envelope"></use>
+					</svg>
+				</div>
+				<input class="form__input required" placeholder="Ваш e-mail" type="email" name="email" id="contactEmail" required>
+			</div>
+			<div class="form__submit">
+				<input class="btn btn__primary form__submit--btn" type="submit" id="signSubmit" value="Отправить">
+			</div>
+		</form>
+		<div class="sign-success">
+			<div class="ask-modal__success">Ваше сообщение успешно отправлено!</div>
+			<div class="modal__stepper--footer" style="padding: 20px">
+				<div class="ask-modal__btn step-success" id="ask-success">Вернуться на сайт</div>
+			</div>
+		</div>
+	</div>
+	<div class="singup-modal__close"></div>
+</div>
