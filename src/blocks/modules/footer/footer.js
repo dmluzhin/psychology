@@ -14,7 +14,7 @@ $(document).ready(function () {
 		$('.modal__stepper').css({"transform": "translate(0%)"});
 		$('.modal__progress--step:nth-child(2)').removeClass('active');
 		$('.modal__progress--finish').removeClass('active');
-		$('.modal__bg2, .modal__bg3').hide();
+		$('.modal__bg2, .modal__bg3, .modal__bg21, .modal__bg22').hide();
 		$('.modal__bg1').show();
 		$('.modal__progress--sign').show();
 		$('.sign-success').removeClass('active');
@@ -635,19 +635,25 @@ $(document).ready(function () {
 
 	// initial state setup
 	setClasses(0, $(".test-modal__steps--container ul li").length);
-
-	/*$('.test-modal__next--btn').click(function (e) {
-		console.log('click!');
-		var $active = $('.test-modal__steps--stepper div.current');
-		$active.next().removeClass('disabled');
-		nextTab($active);
-	});
-
-
-	function nextTab(elem) {
-		$(elem).next().find('a[data-toggle="tab"]').click();
-	}
-	function prevTab(elem) {
-		$(elem).prev().find('a[data-toggle="tab"]').click();
-	}*/
 });
+
+
+(function() {
+	var v = document.getElementsByClassName("youtube-player");
+	for (var n = 0; n < v.length; n++) {
+		v[n].onclick = function() {
+			var iframe = document.createElement("iframe");
+			iframe.setAttribute("src", "//www.youtube.com/embed/" + this.dataset.id + "?modestbranding=1&autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&rel=" + this.dataset.related + "&controls=" + this.dataset.control + "&showinfo=" + this.dataset.info);
+			iframe.setAttribute("frameborder", "0");
+			iframe.setAttribute("id", "youtube-iframe");
+			iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;");
+			if (this.dataset.fullscreen == 1) {
+				iframe.setAttribute("allowfullscreen", "");
+			}
+			while (this.firstChild) {
+				this.removeChild(this.firstChild);
+			}
+			this.appendChild(iframe);
+		};
+	}
+})();

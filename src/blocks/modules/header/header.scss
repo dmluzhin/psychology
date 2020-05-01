@@ -204,6 +204,9 @@ header, .header {
   .navbar.container {
     max-width: 100%;
   }
+  .btn.btn__primary {
+    margin: 0 0 0 30px !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
