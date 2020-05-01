@@ -250,6 +250,11 @@
   &__stepper--footer {
     @extend .modal__footer;
   }
+  &__stepper--back{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
   &__bg1, &__bg2, &__bg3, &__bg4 {
     position: absolute;
@@ -277,10 +282,36 @@
     z-index: 6;
     width: 259px;
     height: 116px;
-    background-image: url("../img/images/modal-art2.png");
-    background-size: 100%;
+    background-image: url("../img/images/modal-art2_1.png");
+    background-size: 100px;
+    background-position: left;
   }
-
+  &__bg21 {
+    display: none;
+    position: absolute;
+    right: 280px;
+    top: -50px;
+    width: 100px;
+    height: 116px;
+    background-image: url("../img/images/modal-art2_2.png");
+    background-size: 100px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  &__bg22 {
+    display: none;
+    position: absolute;
+    right: 270px;
+    top: -10px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/images/modal-art22.png");
+    background-size: 35px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    z-index: 6;
+  }
   &__bg3 {
     display: none;
     right: -70px;

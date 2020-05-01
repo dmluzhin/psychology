@@ -1,5 +1,5 @@
 <?php 
-	$recepient = "d.m.luzhin@yandex.ru";
+	$recepient = "info@da-zdrav.ru";
 	$sitename = "Сайт психологических консультаций";
 	
 	$subject = trim($_POST["subject"]);

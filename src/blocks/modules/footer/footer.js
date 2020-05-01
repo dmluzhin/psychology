@@ -12,14 +12,19 @@ $(document).ready(function () {
 		$('.modal__overlay').removeClass('active');
 		$('body').removeClass('overflow');
 		$('.modal__stepper').css({"transform": "translate(0%)"});
-		$('.modal__progress--step:first-child').removeClass('active');
 		$('.modal__progress--step:nth-child(2)').removeClass('active');
 		$('.modal__progress--finish').removeClass('active');
 		$('.modal__bg2, .modal__bg3').hide();
 		$('.modal__bg1').show();
 		$('.modal__progress--sign').show();
 		$('.sign-success').removeClass('active');
+		$('.modal-success').removeClass('active');
+		//$(this).closest('form').css('background-color', "red");
 	}
+
+	$('.reset').on('click', function() {
+		$(this).closest('form').trigger('reset');
+	});
 
 	$('#modal-contact').on('click', function () {
 		$('#write-modal').addClass('active');
@@ -48,6 +53,11 @@ $(document).ready(function () {
 
 	$('.write-modal__close, .ask-modal__close, .modal-404__close, .graphic-modal__close, .test-modal__close, .singup-modal__close').on('click', function () {
 		backToStart();
+		$(this).closest('form').trigger('reset');
+		});
+
+	$('.btn-success').on('click', function () {
+		$('.modal-success').addClass('active');
 	});
 
 	$('#writeMessage').keyup(function () {
@@ -75,7 +85,13 @@ $(document).ready(function () {
 		$('.modal__stepper').css({"transform": "translate(-33.3333%)"});
 		$('.modal__progress--step:first-child').addClass('active');
 		$('.modal__bg1, .modal__bg3').hide();
-		$('.modal__bg2').show();
+		$('.modal__bg2, .modal__bg21, .modal__bg22').show();
+	});
+
+	$('.modal__stepper--back').on('click', function () {
+		stepperIndex = (stepperIndex < 1) ? stepperIndex - 1 : 2;
+		$('.modal__stepper').css({"transform": "translate(0)"});
+		$('.modal__bg2, .modal__bg21, .modal__bg22').hide();
 	});
 
 	$('.step-send').on('click', function () {
@@ -85,11 +101,12 @@ $(document).ready(function () {
 		$('.modal__progress--finish').addClass('active');
 		$('.modal__bg1, .modal__bg2').hide();
 		$('.modal__bg3').show();
-		$('.modal__progress--sign').hide();
+		$('.modal__progress--sign').hide('fast');
 	});
 
 	$('.step-success').on('click', function () {
 		backToStart();
+		$(this).closest('form').trigger('reset');
 	});
 	$('.test-modal__repeat--btn').on('click', function () {
 
@@ -239,6 +256,7 @@ $(document).ready(function () {
 			data: $(this).serialize()
 		}).done(function () {
 			console.log('contactForm success');
+			$('.modal-success').addClass('active');
 		});
 		return false;
 	});

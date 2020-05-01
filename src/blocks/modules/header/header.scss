@@ -23,7 +23,7 @@ header, .header {
 
   &__item {
     display: flex;
-    min-height: 55px;
+    height: 55px;
 
     img {
       width: 100%;
@@ -33,7 +33,7 @@ header, .header {
 
     .logo {
       width: 210px;
-      height: auto;
+      height: 55px;
     }
   }
 
@@ -73,6 +73,8 @@ header, .header {
   }
 
   &__link {
+    display: flex;
+    align-items: flex-end;
     text-decoration: none;
     color: $black;
     font-size: $fontSizeBase;
@@ -96,7 +98,7 @@ header, .header {
         position: absolute;
         left: 0;
         right: 0;
-        top: 44px;
+        top: 81px;
       }
     }
   }
@@ -191,7 +193,7 @@ header, .header {
       font-size: $fontSizeReg;
 
       &.active:before {
-        top: 22px;
+        top: 61px;
       }
     }
   }
