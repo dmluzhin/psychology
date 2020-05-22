@@ -27,7 +27,7 @@
 				<input class="form__input required" placeholder="Ваш e-mail" type="email" name="email" id="contactEmail" required>
 			</div>
 			<div class="form__submit">
-				<input class="btn btn__primary form__submit--btn" type="submit" id="signSubmit" value="Отправить" onclick="ga('send', 'event', 'zapis_na_priem', 'submit'); ym(61680745,'reachGoal','zapis_na_priem_submit');">
+				<input class="btn btn__primary form__submit--btn" type="submit" id="signSubmit" value="Отправить" onclick="gtag('event', 'submit', {'event_category': 'zapis_na_priem'}); ym(61680745,'reachGoal','zapis_na_priem_submit');">
 			</div>
 		</form>
 		<div class="sign-success">

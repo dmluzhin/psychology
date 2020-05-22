@@ -3,8 +3,8 @@
 		<div class="contact-form__row">
 			<div class="contact-form__left-col">
 				<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/G5mG7ONiQJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-				<div class="youtube-player" data-id="G5mG7ONiQJ8" data-related="0" data-control="0" data-info="0" data-fullscreen="1">
-					<div class="youtube-player__overlay" onclick="ga('send', 'event', 'video', 'play'); ym(61680745,'reachGoal','video')">
+				<div class="youtube-player" data-id="sEtkn_HXwrQ" data-related="0" data-control="0" data-info="0" data-fullscreen="1">
+					<div class="youtube-player__overlay" onclick="gtag('event','play', {'event_category': video'}); ym(61680745,'reachGoal','video')">
 						<div class="play-button"></div>
 					</div>
 					<img class="placeholder" src="/img/images/andr.jpg">
@@ -46,7 +46,7 @@
 							<textarea class="form__textarea" placeholder="Вашe сообщение" type="text" maxlength="255" name="text"></textarea>
 						</div>
 						<div class="form__submit">
-							<input class="btn btn__primary form__submit--btn btn-success" type="submit" id="contactSubmit" value="Отправить" onclick="ga('send', 'event', 'otpravka_formy', 'submit'); ym(61680745,'reachGoal','otpravka_formy');">
+							<input class="btn btn__primary form__submit--btn btn-success" type="submit" id="contactSubmit" value="Отправить" onclick="gtag('event', 'submit', {'event_category': 'otpravka_formy'}); ym(61680745,'reachGoal','otpravka_formy');">
 						</div>
 					</form>
 				</div>

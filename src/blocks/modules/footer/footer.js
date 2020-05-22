@@ -647,6 +647,7 @@ $(document).ready(function () {
 			iframe.setAttribute("frameborder", "0");
 			iframe.setAttribute("id", "youtube-iframe");
 			iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;");
+			iframe.setAttribute("allow", "autoplay")
 			if (this.dataset.fullscreen == 1) {
 				iframe.setAttribute("allowfullscreen", "");
 			}
