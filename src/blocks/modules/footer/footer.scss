@@ -81,6 +81,9 @@ footer, .footer {
 }
 @media screen and (max-width: 992px) {
   .footer {
+    &__hidden--row {
+      display: none;
+    }
     &__list--link {
       font-size: $fontSizeReg;
     }
@@ -88,8 +91,9 @@ footer, .footer {
 }
 @media screen and (max-width: 600px) {
   .footer {
+    padding-bottom: 30px;
     &__subheadline {
-      //display: none;
+      margin-bottom: 30px;
     }
   }
 }

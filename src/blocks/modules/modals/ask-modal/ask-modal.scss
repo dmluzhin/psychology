@@ -143,3 +143,21 @@
     }
   }
 }
+@media screen and (max-width: 992px){
+  .ask-modal {
+    &__btn--next {
+
+    }
+  }
+}
+@media screen and (max-width: 600px){
+  .modal {
+    &__progress--icon svg {
+      width: 16px;
+      height: 16px;
+    }
+    &__progress--text {
+      font-size: $fontSizeReg;
+    }
+  }
+}

@@ -275,3 +275,14 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .graphic-modal {
+    &__close {
+      &:before, &:after {
+        background-color: rgba($black, .8);
+        z-index: 3;
+      }
+    }
+  }
+}
