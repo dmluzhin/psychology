@@ -282,12 +282,10 @@ $(document).ready(function () {
 		return false;
 	});
 
-	function checkForm() {
+	/*function checkForm() {
 		var checkFio = $('#contactFio');
 		var checkPhone = $('#contactPhone');
 		var checkEmail = $('#contactEmail');
-		console.log('alve');
-
 		if (checkFio.length != 0 && checkPhone.length != 0 && checkEmail.length != 0) {
 			$("#contactSubmit").addClass('active');
 			$("#signSubmit").addClass('active');
@@ -296,7 +294,7 @@ $(document).ready(function () {
 			$("#signSubmit").removeClass('active');
 		}
 		return false;
-	}
+	}*/
 
 	$('.form__input').on('keyup', function () {
 		checkForm();
@@ -657,4 +655,40 @@ $(document).ready(function () {
 			this.appendChild(iframe);
 		};
 	}
+})();
+
+(function() {
+	$('.write-modal__form--control input').keyup(function() {
+
+		var empty = false;
+		$('.write-modal__form--control input').each(function() {
+			if ($(this).val() == '') {
+				empty = true;
+			}
+		});
+
+		if (empty) {
+			$('.write-modal__btn--next').addClass('disabled');
+		} else {
+			$('.write-modal__btn--next').removeClass('disabled');
+		}
+	});
+})();
+
+(function() {
+	$('.ask-modal__form--control input').keyup(function() {
+
+		var empty = false;
+		$('.ask-modal__form--control input').each(function() {
+			if ($(this).val() == '') {
+				empty = true;
+			}
+		});
+
+		if (empty) {
+			$('.ask-modal__btn--next').addClass('disabled');
+		} else {
+			$('.ask-modal__btn--next').removeClass('disabled');
+		}
+	});
 })();

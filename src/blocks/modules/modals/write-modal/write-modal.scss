@@ -178,6 +178,10 @@
         opacity: 1;
       }
     }
+    &.sender.disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
   }
 
   &__success {

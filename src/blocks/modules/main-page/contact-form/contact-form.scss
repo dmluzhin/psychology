@@ -58,11 +58,10 @@
     display: flex;
     justify-content: flex-end;
     &--btn {
-      opacity: .4;
-      pointer-events: none;
-      &.active {
-        pointer-events: auto;
-        opacity: 1;
+      cursor: pointer;
+      &.disabled {
+        pointer-events: none;
+        opacity: .5;
       }
     }
   }
