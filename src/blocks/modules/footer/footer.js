@@ -69,6 +69,13 @@ $(document).ready(function () {
 			$('.step-message').addClass("active");
 		}
 	});
+	$('#writeName', '#phone', '#writeEmail').keyup(function () {
+		$('#writeName', '#phone', '#writeEmail').attr('maxlength', '40');
+		var chk = $('#writeName', '#phone', '#writeEmail').val();
+		if (chk.length < 3) {
+			$('.sender').addClass('active');
+		}
+	});
 
 	$('#askMessage').keyup(function () {
 		$('#askMessage').attr('maxlength', '500');
@@ -635,6 +642,24 @@ $(document).ready(function () {
 
 	// initial state setup
 	setClasses(0, $(".test-modal__steps--container ul li").length);
+
+	(function() {
+		$('.write-modal__form--control > input').keyup(function() {
+
+			var empty = false;
+			$('.write-modal__form--control > input').each(function() {
+				if ($(this).val() == '') {
+					empty = true;
+				}
+			});
+
+			if (empty) {
+				$('#step-send').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+			} else {
+				$('#step-send').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+			}
+		});
+	})()
 });
 
 

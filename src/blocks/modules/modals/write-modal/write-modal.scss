@@ -135,6 +135,10 @@
     padding-right: 40px !important;
     position: relative;
     box-shadow: none !important;
+    &:disabled {
+      opacity: .5 !important;
+      pointer-events: none;
+    }
 
     &:after {
       content: '';
@@ -160,7 +164,7 @@
     }
 
     input {
-      opacity: 0;
+      //opacity: 0;
       position: absolute;
       width: 100%;
       height: 100%;

@@ -161,3 +161,8 @@
     }
   }
 }
+
+.step-send:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
